@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /scripts/
+Disallow: /muse_manifest.xml
+
+Sitemap: https://petitchalet.fr/sitemap.xml
