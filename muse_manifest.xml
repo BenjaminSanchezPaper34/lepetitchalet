@@ -1,0 +1,130 @@
+<manifest alg="2" build="2018.1.1.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="https://petitchalet.fr" resolutions="1x" timestamp="1772783685391">
+  <folder name="css">
+    <file name="site_global.css" crc="4162611254"/>
+    <file name="master_a-gabarit.css" crc="174422071" ref="index"/>
+    <file name="index.css" crc="4286332408" ref="index"/>
+  </folder>
+  <folder name="fonts">
+    <file name="montserrat-bold-webfont.woff" crc="298522012"/>
+    <file name="montserrat-bold-webfont.eot" crc="429015596"/>
+    <file name="montserrat-bold-webfont.svg" crc="30044671"/>
+    <file name="outfit-regular-webfont.woff" crc="3944101014"/>
+    <file name="outfit-regular-webfont.eot" crc="175980864"/>
+    <file name="outfit-regular-webfont.svg" crc="4278112825"/>
+    <file name="montserrat-regular-webfont.woff" crc="6778641"/>
+    <file name="montserrat-regular-webfont.eot" crc="208200907"/>
+    <file name="montserrat-regular-webfont.svg" crc="3954203612"/>
+    <file name="bebasneue-regular-webfont.woff" crc="508862286"/>
+    <file name="bebasneue-regular-webfont.eot" crc="3944214880"/>
+    <file name="bebasneue-regular-webfont.svg" crc="501106659"/>
+    <file name="bebasneue-regular-webfont.woff" crc="508862286"/>
+    <file name="bebasneue-regular-webfont.eot" crc="3944214880"/>
+    <file name="bebasneue-regular-webfont.svg" crc="501106659"/>
+    <file name="sf-pro-display-light-webfont.woff" crc="400594250"/>
+    <file name="sf-pro-display-light-webfont.eot" crc="3877575897"/>
+    <file name="sf-pro-display-light-webfont.svg" crc="425251153"/>
+    <file name="sf-pro-display-regular-webfont.woff" crc="237760250"/>
+    <file name="sf-pro-display-regular-webfont.eot" crc="125583448"/>
+    <file name="sf-pro-display-regular-webfont.svg" crc="470116927"/>
+    <file name="outfit-regular-webfont.woff" crc="3944101014"/>
+    <file name="outfit-regular-webfont.eot" crc="175980864"/>
+    <file name="outfit-regular-webfont.svg" crc="4278112825"/>
+    <file name="sf-pro-display-bold-webfont.woff" crc="92900330"/>
+    <file name="sf-pro-display-bold-webfont.eot" crc="3847729850"/>
+    <file name="sf-pro-display-bold-webfont.svg" crc="4021242965"/>
+    <file name="montserrat-bold-webfont.woff" crc="298522012"/>
+    <file name="montserrat-bold-webfont.eot" crc="429015596"/>
+    <file name="montserrat-bold-webfont.svg" crc="30044671"/>
+    <file name="bebasneue-regular-webfont.woff" crc="508862286"/>
+    <file name="bebasneue-regular-webfont.eot" crc="3944214880"/>
+    <file name="bebasneue-regular-webfont.svg" crc="501106659"/>
+    <file name="montserrat-regular-webfont.woff" crc="6778641"/>
+    <file name="montserrat-regular-webfont.eot" crc="208200907"/>
+    <file name="montserrat-regular-webfont.svg" crc="3954203612"/>
+    <file name="outfit-regular-webfont.woff" crc="3944101014"/>
+    <file name="outfit-regular-webfont.eot" crc="175980864"/>
+    <file name="outfit-regular-webfont.svg" crc="4278112825"/>
+  </folder>
+  <folder name="assets">
+    <file name="video-lepetitchalet.webm" crc="3934261809" seo="true" mt="1765100767000"/>
+    <file name="video-lepetitchalet.mp4" crc="316107344" seo="true" mt="1765100689000"/>
+    <file name="videom-lepetitchalet.webm" crc="3855053137" seo="true" mt="1766564967000"/>
+    <file name="videom-lepetitchalet.mp4" crc="3865806925" seo="true" mt="1766564813000"/>
+    <file name="planche-300x475-lepetitchalet-es.pdf" crc="81823078" seo="true" mt="1769081907000"/>
+    <file name="menunumerique-boissons-lepetitchalet.pdf" crc="4272696551" seo="true" mt="1770968590000"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="209076791" ref="phone>index:phone>la-carte:index"/>
+    <file name="museutils.js" crc="3939489907" ref="phone>index:phone>la-carte:index"/>
+    <file name="whatinput.js" crc="86476730" ref="phone>index:phone>la-carte:index"/>
+    <file name="museconfig.js" crc="128606099" ref="phone>index:phone>la-carte:index"/>
+    <file name="jquery.watch.js" crc="522499760" ref="phone>index:phone>la-carte:index"/>
+    <file name="jquery.musepolyfill.bgsize.js" crc="85124417" ref="phone>index:index"/>
+    <file name="require.js" crc="4177726516" ref="phone>index:phone>la-carte:index"/>
+    <file name="webpro.js" crc="3856315280" ref="phone>la-carte"/>
+    <file name="musewpdisclosure.js" crc="4294234138" ref="phone>la-carte"/>
+  </folder>
+  <folder name="images">
+    <file name="favicon.ico" crc="185775564" ref="phone>index"/>
+    <file name="logo-blanc-lepetitchalet.svg" crc="112397454" seo="true" ref="phone>index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="logo-blanc-lepetitchalet_poster_.png" crc="310476221" ref="phone>index"/>
+    <file name="fond-lepetitchalet.png" crc="4090447047" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="shadow1.png" crc="228186352" ref="phone>index">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="la-carte" alt=""/>
+    </file>
+    <file name="footer-lepetitchalet.jpg" crc="99546871" ref="phone>index:index">
+      <caption webpage="index" alt=""/>
+      <caption webpage="la-carte" alt=""/>
+    </file>
+    <file name="facebook-blanc-lepetitchalet.svg" crc="274589301" ref="phone>index"/>
+    <file name="facebook-blanc-lepetitchalet_poster_u1257.png" crc="4246203543" ref="phone>index"/>
+    <file name="instagram-blanc-lepetitchalet.svg" crc="51593638" ref="phone>index"/>
+    <file name="instagram-blanc-lepetitchalet_poster_u1265.png" crc="50465998" ref="phone>index"/>
+    <file name="tripadvisor-blanc-lepetitchalet.svg" crc="3830532399" seo="true" ref="phone>index:phone>la-carte">
+      <caption webpage="index" alt=""/>
+      <caption webpage="la-carte" alt=""/>
+    </file>
+    <file name="tripadvisor-blanc-lepetitchalet_poster_.png" crc="108031552" ref="phone>index"/>
+    <file name="logoblanc-paper34.svg" crc="3970129298" seo="true" ref="phone>index:phone>la-carte:index">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="la-carte" alt=""/>
+    </file>
+    <file name="logoblanc-paper34_poster_.png" crc="50960925" ref="phone>index"/>
+    <file name="logo-lepetitchalet.svg" crc="4036544391" seo="true" ref="phone>la-carte">
+      <caption webpage="la-carte" alt=""/>
+    </file>
+    <file name="logo-lepetitchalet_poster_.png" crc="494829148" ref="phone>la-carte"/>
+    <file name="logo2-blanc-lepetitchalet.svg" crc="28080953" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="logo2-blanc-lepetitchalet_poster_.png" crc="123644525" ref="index"/>
+    <file name="facebook-marron-lepetitchalet.svg" crc="3854389074" ref="index"/>
+    <file name="facebook-marron-lepetitchalet_poster_u1241.png" crc="47609901" ref="index"/>
+    <file name="instagram-marron-lepetitchalet.svg" crc="3922518221" ref="index"/>
+    <file name="instagram-marron-lepetitchalet_poster_u1249.png" crc="189378710" ref="index"/>
+    <file name="tripadvisor-marron-lepetitchalet.svg" crc="209233015" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="tripadvisor-marron-lepetitchalet_poster_.png" crc="4278779625" ref="index"/>
+    <file name="whatsapp.svg" crc="4107491607" ref="phone>index"/>
+    <file name="whatsapp_poster_u2006.png" crc="370852309" ref="phone>index"/>
+    <file name="le-petit-chalet--restaurant-de-montagne-au-pas-de-la-case,-andorre-favicon.ico" crc="185775564" ref="index"/>
+  </folder>
+  <folder name="phone">
+    <folder name="css">
+      <file name="master_a-gabarit.css" crc="527020763" ref="phone>la-carte:phone>index"/>
+      <file name="la-carte.css" crc="3976432257" ref="phone>la-carte"/>
+      <file name="index.css" crc="4206588034" ref="phone>index"/>
+    </folder>
+    <file name="index.html" crc="481991853" seo="true" mt="1772783665087" redirect="true"/>
+    <file name="la-carte.html" crc="4074531362" seo="true" mt="1772783649782" redirect="true"/>
+  </folder>
+  <file name="index.html" crc="3879836152" seo="true" mt="1772783583343" redirect="true"/>
+</manifest>
