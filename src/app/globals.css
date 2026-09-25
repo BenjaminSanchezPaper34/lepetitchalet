@@ -73,13 +73,13 @@
   .lien:hover { background-size: 100% 1px; }
   .papier {
     background-color: var(--color-creme-fonce);
-    background-image: url("/images/papier.jpg");
+    background-image: url("/images/papier.webp");
     background-size: 900px auto;
     background-blend-mode: multiply;
   }
   .bois {
     background-color: #3b2519;
-    background-image: linear-gradient(rgb(29 18 12 / 0.55), rgb(29 18 12 / 0.75)), url("/images/bois.jpg");
+    background-image: linear-gradient(rgb(29 18 12 / 0.55), rgb(29 18 12 / 0.75)), url("/images/bois.webp");
     background-size: cover;
     background-position: center;
   }

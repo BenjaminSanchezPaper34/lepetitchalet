@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { getImageProps } from "next/image";
 import Link from "next/link";
 import { dict, routes, type Locale } from "@/content/i18n";
 import { site } from "@/content/site";
@@ -7,14 +7,27 @@ import HeroVideo from "./HeroVideo";
 import posterDesktop from "../../../public/video/hero-poster.webp";
 import posterPhone from "../../../public/video/hero-poster-phone.webp";
 
+/** Poster en direction artistique : portrait sur mobile, paysage au-delà — une seule image téléchargée. */
+function Poster() {
+  const commun = { alt: "", fill: true, priority: true, sizes: "100vw" } as const;
+  const { props: { srcSet: desktop } } = getImageProps({ ...commun, src: posterDesktop });
+  const { props: mobile } = getImageProps({ ...commun, src: posterPhone });
+  return (
+    <picture>
+      <source media="(min-width: 768px)" srcSet={desktop} />
+      {/* eslint-disable-next-line jsx-a11y/alt-text, @next/next/no-img-element */}
+      <img {...mobile} className="absolute inset-0 h-full w-full object-cover" />
+    </picture>
+  );
+}
+
 export default function Hero({ locale }: { locale: Locale }) {
   const t = dict[locale];
   return (
     <section className="relative isolate flex min-h-[100svh] items-end overflow-hidden bg-nuit text-creme">
       {/* Fond : poster (LCP) puis vidéo, en parallaxe douce */}
       <div className="absolute inset-0 -z-10" data-parallax="10">
-        <Image src={posterPhone} alt="" fill priority sizes="100vw" className="object-cover md:hidden" placeholder="blur" />
-        <Image src={posterDesktop} alt="" fill priority sizes="100vw" className="hidden object-cover md:block" placeholder="blur" />
+        <Poster />
         <HeroVideo />
       </div>
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-nuit via-nuit/40 to-nuit/30" />

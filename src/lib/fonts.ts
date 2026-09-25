@@ -4,7 +4,6 @@ import localFont from "next/font/local";
 export const bebas = localFont({
   src: [
     { path: "../fonts/bebas-neue-latin-400-normal.woff2", weight: "400" },
-    { path: "../fonts/bebas-neue-latin-ext-400-normal.woff2", weight: "400" },
   ],
   variable: "--font-bebas",
   display: "swap",

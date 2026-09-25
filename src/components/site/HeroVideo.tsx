@@ -17,8 +17,11 @@ export default function HeroVideo() {
     const eco = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData;
     if (reduit || eco) return;
     const choisir = () => setSrc(window.matchMedia("(min-width: 768px)").matches ? "/video/hero-desktop.mp4" : "/video/hero-phone.mp4");
-    const idle = (window as Window & { requestIdleCallback?: (cb: () => void) => number }).requestIdleCallback;
-    if (idle) idle(choisir); else setTimeout(choisir, 1200);
+    // Hors chemin critique : après le chargement complet de la page + 2,5 s
+    let t: ReturnType<typeof setTimeout>;
+    const apres = () => { t = setTimeout(choisir, 2500); };
+    if (document.readyState === "complete") apres(); else window.addEventListener("load", apres, { once: true });
+    return () => { clearTimeout(t); window.removeEventListener("load", apres); };
   }, []);
 
   if (!src) return null;
