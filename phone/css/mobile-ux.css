@@ -1,0 +1,55 @@
+/* Le Petit Chalet — surcouche ergonomie mobile (pages /phone/ issues de Muse).
+ * Tokens de la DA existante : brun #6A4430, crème #FFF9EF, Bebas Neue (titres),
+ * Montserrat (texte). Chargée après les CSS Muse pour les corriger sans les réécrire. */
+:root { --lpc-brun: #6A4430; --lpc-creme: #FFF9EF; --lpc-taupe: #876959; }
+
+/* 1. Bandeau d'ouverture : ne déborde plus (box-sizing), plus compact, safe area */
+.season-banner {
+  box-sizing: border-box;
+  padding: calc(10px + env(safe-area-inset-top)) 16px 10px !important;
+}
+.season-banner p { font-size: 14px !important; }
+.season-banner .banner-title { font-size: 18px !important; margin-bottom: 2px !important; }
+.season-banner .banner-sub { display: none; }            /* redondant avec le titre */
+.season-banner .social-links { margin-top: 4px !important; gap: 4px !important; }
+.season-banner .social-links a {
+  font-size: 14px !important; padding: 6px 12px; display: inline-block;   /* cibles tactiles */
+}
+#page { padding-top: calc(68px + env(safe-area-inset-top)) !important; }
+
+/* 2. Bloc de présentation : centré comme le reste de la page, hiérarchie lisible */
+#u273-11, #u273-11-bw { min-height: 0 !important; }
+#u273-11 {
+  box-sizing: border-box;
+  padding: 8px 28px 24px !important;
+  text-align: center;
+  line-height: 1.6 !important;
+}
+#u273-11 h1 {
+  font-family: '__Montserrat_5', Montserrat, sans-serif; font-weight: 700 !important;
+  font-size: 13px !important; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--lpc-taupe); margin: 0 0 10px !important; line-height: 1.5;
+}
+#u273-11 h2 {
+  font-family: '__Bebas Neue_5', 'Bebas Neue', Impact, sans-serif; font-weight: 400 !important;
+  font-size: 36px !important; line-height: 1 !important; letter-spacing: .5px;
+  color: var(--lpc-brun); margin: 0 0 18px !important;
+}
+#u273-11 p { margin: 0 0 14px; }
+#u273-11 .lpc-vide { display: none; }
+#u273-11 a { color: inherit; font-weight: 700; }
+.lpc-cta {
+  display: inline-block; box-sizing: border-box; min-height: 48px; margin: 10px 0 18px;
+  padding: 0 28px; line-height: 44px; border: 2px solid var(--lpc-brun); border-radius: 29px;
+  background: var(--lpc-brun); color: var(--lpc-creme) !important; text-decoration: none;
+  font-family: '__Montserrat_5', Montserrat, sans-serif; font-weight: 700; font-size: 17px;
+}
+.lpc-cta:active { transform: scale(.98); }
+
+/* 3. Pied de page : numéros cliquables, liens légaux espacés au doigt */
+.lpc-tel { color: inherit !important; text-decoration: none; display: inline-block; padding: 4px 8px; }
+.ame-copyright-text a { padding: 12px 2px; margin: -12px 0; }   /* zone tactile agrandie sans pousser la mise en page (conteneur Muse à hauteur fixe) */
+
+/* 4. Rythme vertical : les ancres Muse (61 px invisibles) creusaient des trous entre sections */
+#u1277, #u1283, #u1291 { height: 16px !important; }
+#u273-11 h1, #u273-11 h2 { text-wrap: balance; }
