@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------
+ * Le Petit Chalet — tokens du DESIGN.md (validé le 25/09/2026).
+ * Une seule couleur « décision » : le bois brûlé. Tout le reste est matière.
+ * ------------------------------------------------------------------ */
+@theme {
+  --color-bois: #6a4430;        /* décision : boutons, liens, titres, prix */
+  --color-bois-clair: #8b5e3c;  /* survol du bois, jamais seul */
+  --color-creme: #fff9ef;       /* fond de page : le papier de la carte */
+  --color-creme-fonce: #f4ead9; /* fond alterné crème (ruptures de sections) */
+  --color-nuit: #1d1d1f;        /* sections sombres + texte courant */
+  --color-ecorce: #876959;      /* texte secondaire, jamais une action */
+  --color-braise: #e0a36a;      /* uniquement la lueur du grill */
+
+  --font-display: var(--font-bebas), "Bebas Neue", Impact, sans-serif;
+  --font-sans: var(--font-montserrat), Montserrat, system-ui, sans-serif;
+
+  --radius-carte: 1rem;
+  --shadow-bois: 0 18px 40px -18px rgb(106 68 48 / 0.35);
+  --ease-chaud: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; scroll-padding-top: 7rem; }
+  body {
+    background: var(--color-creme);
+    color: var(--color-nuit);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3 { text-wrap: balance; }
+  p { text-wrap: pretty; }
+  ::selection { background: var(--color-bois); color: var(--color-creme); }
+  :focus-visible { outline: 2px solid var(--color-bois); outline-offset: 3px; border-radius: 4px; }
+}
+
+@layer components {
+  /* Titre de section : Bebas, capitales — le droit d'apparition du display */
+  .titre-section {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    line-height: 0.95;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+  }
+  .kicker {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-ecorce);
+  }
+  /* Bouton pill — repris du site d'origine */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+    min-height: 3rem; padding: 0 1.75rem; border-radius: 9999px;
+    font-weight: 700; font-size: 1rem; line-height: 1;
+    transition: transform 0.3s var(--ease-chaud), box-shadow 0.3s var(--ease-chaud), background-color 0.3s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .btn:hover { transform: scale(1.02); }
+  .btn:active { transform: scale(0.98); }
+  .btn-bois { background: var(--color-bois); color: var(--color-creme); box-shadow: var(--shadow-bois); }
+  .btn-bois:hover { background: var(--color-bois-clair); }
+  .btn-ligne { border: 2px solid currentColor; }
+  .lien {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px; background-repeat: no-repeat; background-position: 0 100%;
+    transition: background-size 0.4s var(--ease-chaud);
+  }
+  .lien:hover { background-size: 100% 1px; }
+  .papier {
+    background-color: var(--color-creme-fonce);
+    background-image: url("/images/papier.jpg");
+    background-size: 900px auto;
+    background-blend-mode: multiply;
+  }
+  .bois {
+    background-color: #3b2519;
+    background-image: linear-gradient(rgb(29 18 12 / 0.55), rgb(29 18 12 / 0.75)), url("/images/bois.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+/* Reveal au scroll : état initial posé en CSS (pas de flash), GSAP anime ensuite.
+ * Sans JS ou en reduced-motion, tout reste visible. */
+.js [data-reveal] { opacity: 0; transform: translateY(40px); }
+@media (prefers-reduced-motion: reduce) {
+  .js [data-reveal] { opacity: 1 !important; transform: none !important; }
+  html { scroll-behavior: auto; }
+}
+
+/* Lenis */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+/* Effet signature « braise » (DESIGN.md §4) : la lueur du grill monte du bas de la
+ * photo quand elle entre à l'écran, puis respire lentement. CSS pur. */
+.braise-lueur {
+  background: radial-gradient(130% 70% at 50% 115%, rgb(224 163 106 / 0.6), rgb(224 163 106 / 0.12) 45%, transparent 70%);
+  mix-blend-mode: screen;
+  opacity: 0.35;
+  animation: braise-respire 3.6s ease-in-out infinite alternate;
+}
+@supports (animation-timeline: view()) {
+  .braise-lueur {
+    animation: braise-monte linear both, braise-respire 3.6s ease-in-out infinite alternate;
+    animation-timeline: view(), auto;
+    animation-range: entry 10% cover 45%, normal;
+  }
+}
+@keyframes braise-monte { from { transform: translateY(35%); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes braise-respire { from { filter: brightness(0.85); } to { filter: brightness(1.15); } }
+@media (prefers-reduced-motion: reduce) {
+  .braise-lueur { animation: none; opacity: 0.8; }
+}
