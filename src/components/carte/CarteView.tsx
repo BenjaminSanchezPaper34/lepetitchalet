@@ -10,7 +10,7 @@ function Prix({ prix, locale }: { prix: Rubrique["plats"][number]["prix"]; local
       {prix.map((p) => (
         <span key={p.label} className="flex flex-col items-end leading-none">
           <span className="font-display text-2xl text-bois">{formatPrix(p.prix, locale)}</span>
-          <span className="text-xs text-ecorce">{p.label}</span>
+          <span className="mt-0.5 text-sm text-ecorce">{p.label}</span>
         </span>
       ))}
     </span>
@@ -45,7 +45,7 @@ export default function CarteView({ locale }: { locale: Locale }) {
   return (
     <>
       {/* Barre de catégories collante : défilement horizontal au doigt, au trackpad et par flèches */}
-      <nav aria-label={t.titre} className="sticky top-(--h-entete) z-40 border-b border-bois/15 bg-creme/95 backdrop-blur">
+      <nav aria-label={t.titre} className="sticky top-(--h-entete) z-40 transition-[top] duration-300 ease-[var(--ease-chaud)] border-b border-bois/15 bg-creme/95 backdrop-blur">
         <OngletsCarte onglets={tout.map((r) => ({ id: r.id, label: r.titre[locale] }))} locale={locale} />
       </nav>
 

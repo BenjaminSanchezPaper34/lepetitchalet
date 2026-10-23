@@ -30,9 +30,9 @@ export default function Infos({ locale }: { locale: Locale }) {
           </div>
           <div data-reveal>
             <dt className="flex items-center gap-2 font-display text-2xl uppercase text-bois"><Phone aria-hidden="true" className="h-5 w-5" />{t.telephone}</dt>
-            <dd className="mt-2 text-lg leading-relaxed">
-              <a href={site.tel.lien} className="lien font-semibold">{site.tel.affiche}</a><br />
-              <a href={site.tel2.lien} className="lien">{site.tel2.affiche}</a>
+            <dd className="mt-1 flex flex-col items-start text-lg">
+              <a href={site.tel.lien} className="lien inline-flex min-h-11 items-center font-semibold">{site.tel.affiche}</a>
+              <a href={site.tel2.lien} className="lien inline-flex min-h-11 items-center">{site.tel2.affiche}</a>
             </dd>
           </div>
         </dl>

@@ -32,6 +32,8 @@ export default function OngletsCarte({ onglets, locale }: { onglets: Onglet[]; l
     const el = liste.current;
     if (!el) return;
     mesurer();
+    // Les largeurs changent quand les polices arrivent : on remesure à ce moment-là
+    document.fonts?.ready.then(mesurer);
     el.addEventListener("scroll", mesurer, { passive: true });
     window.addEventListener("resize", mesurer);
     return () => { el.removeEventListener("scroll", mesurer); window.removeEventListener("resize", mesurer); };

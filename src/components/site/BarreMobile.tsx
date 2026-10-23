@@ -9,17 +9,17 @@ const ICONES = { carte: BookOpen, itineraire: MapPin, tel: Phone } as const;
 
 /**
  * Barre d'actions mobile, sous le pouce : la carte, l'itinéraire, l'appel.
- * Apparaît une fois le hero dépassé (le hero a déjà ses propres boutons),
- * jamais au-delà de 768 px. Safe area bas respectée (barre d'accueil iPhone).
+ * Sur l'accueil, apparaît une fois le hero dépassé (le hero a ses propres boutons) ;
+ * ailleurs, visible d'emblée. Jamais au-delà de 768 px (le bouton Réserver de l'en-tête prend le relais). Safe area bas respectée (barre d'accueil iPhone).
  */
-export default function BarreMobile({ actions }: { actions: Action[] }) {
+export default function BarreMobile({ actions, toujours = false }: { actions: Action[]; toujours?: boolean }) {
   const [visible, setVisible] = useState(false);
   useEffect(() => {
-    const seuil = () => setVisible(window.scrollY > window.innerHeight * 0.6);
+    const seuil = () => setVisible(toujours || window.scrollY > window.innerHeight * 0.6);
     seuil();
     window.addEventListener("scroll", seuil, { passive: true });
     return () => window.removeEventListener("scroll", seuil);
-  }, []);
+  }, [toujours]);
 
   return (
     <nav
@@ -28,7 +28,7 @@ export default function BarreMobile({ actions }: { actions: Action[] }) {
         visible ? "translate-y-0" : "translate-y-full"
       }`}
     >
-      <ul className="flex">
+      <ul className="flex pr-[env(safe-area-inset-right)] pl-[env(safe-area-inset-left)]">
         {actions.map((a) => {
           const Icone = ICONES[a.icone];
           const principal = a.icone === "tel";

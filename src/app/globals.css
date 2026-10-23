@@ -46,7 +46,7 @@
     text-transform: uppercase;
   }
   .kicker {
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
     font-weight: 700;
     letter-spacing: 0.16em;
     text-transform: uppercase;
@@ -107,6 +107,11 @@
 /* Barre d'actions mobile : la fin de page ne passe jamais dessous */
 @media (max-width: 767px) {
   body:has(nav[aria-label="Actions rapides"]) { padding-bottom: calc(3.5rem + env(safe-area-inset-bottom)); }
+}
+
+/* iPhone à l'horizontale : le contenu ne passe jamais sous l'encoche (viewport-fit=cover) */
+@media (orientation: landscape) and (max-height: 500px) {
+  body { padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); background-color: var(--color-nuit); }
 }
 
 /* Lenis */
