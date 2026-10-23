@@ -55,7 +55,11 @@ export default function OngletsCarte({ onglets, locale }: { onglets: Onglet[]; l
     const el = liste.current;
     const lien = actif ? el?.querySelector<HTMLElement>(`[data-onglet="${actif}"]`) : null;
     if (!el || !lien) return;
-    const cible = lien.offsetLeft - (el.clientWidth - lien.offsetWidth) / 2;
+    // Centré, mais collé au bord quand on est au début ou à la fin : jamais sous le fondu des flèches
+    const max = el.scrollWidth - el.clientWidth;
+    let cible = lien.offsetLeft - (el.clientWidth - lien.offsetWidth) / 2;
+    if (cible < 56) cible = 0;
+    if (cible > max - 56) cible = max;
     el.scrollTo({ left: cible, behavior: "smooth" });
   }, [actif]);
 
@@ -71,10 +75,10 @@ export default function OngletsCarte({ onglets, locale }: { onglets: Onglet[]; l
       <ul
         ref={liste}
         data-lenis-prevent
-        className="flex snap-x gap-1 overflow-x-auto overscroll-x-contain px-4 py-2 [scrollbar-width:none] sm:px-8 [&::-webkit-scrollbar]:hidden"
+        className="flex gap-1 overflow-x-auto overscroll-x-contain px-4 py-2 [scrollbar-width:none] sm:px-8 [&::-webkit-scrollbar]:hidden"
       >
         {onglets.map((o) => (
-          <li key={o.id} className="shrink-0 snap-start">
+          <li key={o.id} className="shrink-0">
             <a
               href={`#${o.id}`}
               data-onglet={o.id}
