@@ -71,11 +71,18 @@
     transition: background-size 0.4s var(--ease-chaud);
   }
   .lien:hover { background-size: 100% 1px; }
+  /* Lavis du papier Le Petit Chalet, en une seule feuille sur toute la section (plus de répétition) :
+   * portrait sous 768 px, paysage au-delà. Les taches restent en bas, le haut clair porte le texte. */
   .papier {
     background-color: var(--color-creme-fonce);
-    background-image: url("/images/papier.webp");
-    background-size: 900px auto;
+    background-image: url("/images/papier-portrait.webp");
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
     background-blend-mode: multiply;
+  }
+  @media (min-width: 768px) {
+    .papier { background-image: url("/images/papier-paysage.webp"); }
   }
   .bois {
     background-color: #3b2519;
