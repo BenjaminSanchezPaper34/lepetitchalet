@@ -29,13 +29,15 @@ export default function SmoothScroll() {
       gsap.ticker.add(tick);
       gsap.ticker.lagSmoothing(0);
 
+      // Mobile : reveals plus courts et déclenchés plus tôt (on défile vite au doigt)
+      const mobile = window.matchMedia("(max-width: 767px)").matches;
       const ctx = gsap.context(() => {
         gsap.utils.toArray<HTMLElement>("[data-reveal]").forEach((el) => {
           const group = el.closest("[data-reveal-group]");
           const index = group ? Array.from(group.querySelectorAll("[data-reveal]")).indexOf(el) : 0;
           gsap.to(el, {
-            opacity: 1, y: 0, duration: 0.8, ease: "power2.out", delay: index * 0.12,
-            scrollTrigger: { trigger: el, start: "top 88%", once: true },
+            opacity: 1, y: 0, duration: mobile ? 0.6 : 0.8, ease: "power2.out", delay: index * (mobile ? 0.08 : 0.12),
+            scrollTrigger: { trigger: el, start: mobile ? "top 97%" : "top 88%", once: true },
           });
         });
         gsap.utils.toArray<HTMLElement>("[data-parallax]").forEach((el) => {

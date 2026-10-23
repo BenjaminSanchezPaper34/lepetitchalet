@@ -1,7 +1,7 @@
 import { dict, type Locale } from "@/content/i18n";
 import { boissons, carte, formatPrix, nomPlat, type Rubrique } from "@/content/menu";
 import { site } from "@/content/site";
-import { avantOuverture } from "@/lib/saison";
+import OngletsCarte from "./OngletsCarte";
 
 function Prix({ prix, locale }: { prix: Rubrique["plats"][number]["prix"]; locale: Locale }) {
   if (typeof prix === "number") return <span className="font-display text-2xl text-bois">{formatPrix(prix, locale)}</span>;
@@ -19,7 +19,7 @@ function Prix({ prix, locale }: { prix: Rubrique["plats"][number]["prix"]; local
 
 function Section({ r, locale }: { r: Rubrique; locale: Locale }) {
   return (
-    <section id={r.id} className="scroll-mt-48">
+    <section id={r.id} className="scroll-mt-[calc(var(--h-entete)+4.75rem)]">
       <h2 className="titre-section !text-[clamp(2.25rem,6vw,3.5rem)] text-bois">{r.titre[locale]}</h2>
       {r.intro && <p className="mt-3 text-base leading-relaxed text-ecorce">{r.intro[locale]}</p>}
       <ul className="mt-6 divide-y divide-bois/15 border-t border-bois/15">
@@ -44,23 +44,15 @@ export default function CarteView({ locale }: { locale: Locale }) {
   const tout = [...carte, { id: "boissons", titre: { fr: t.boissonsTitre, es: t.boissonsTitre, en: t.boissonsTitre } } as const];
   return (
     <>
-      {/* Barre de catégories collante, défilement horizontal au doigt */}
-      <nav aria-label={t.titre} className={`sticky ${avantOuverture() ? "top-[6.75rem]" : "top-[4.25rem]"} z-40 border-b border-bois/15 bg-creme/95 backdrop-blur`}>
-        <ul className="mx-auto flex max-w-4xl snap-x gap-1 overflow-x-auto px-4 py-2 [scrollbar-width:none] sm:px-8">
-          {tout.map((r) => (
-            <li key={r.id} className="snap-start">
-              <a href={`#${r.id}`} className="inline-flex min-h-11 items-center whitespace-nowrap rounded-full px-4 text-sm font-semibold text-bois hover:bg-bois hover:text-creme">
-                {r.titre[locale]}
-              </a>
-            </li>
-          ))}
-        </ul>
+      {/* Barre de catégories collante : défilement horizontal au doigt, au trackpad et par flèches */}
+      <nav aria-label={t.titre} className="sticky top-(--h-entete) z-40 border-b border-bois/15 bg-creme/95 backdrop-blur">
+        <OngletsCarte onglets={tout.map((r) => ({ id: r.id, label: r.titre[locale] }))} locale={locale} />
       </nav>
 
       <div className="mx-auto max-w-4xl space-y-16 px-5 py-14 sm:px-8 sm:py-20">
         {carte.map((r) => <Section key={r.id} r={r} locale={locale} />)}
 
-        <div id="boissons" className="scroll-mt-48 space-y-16 border-t-4 border-double border-bois/30 pt-16">
+        <div id="boissons" className="scroll-mt-[calc(var(--h-entete)+4.75rem)] space-y-16 border-t-4 border-double border-bois/30 pt-16">
           <h2 className="titre-section text-bois">{t.boissonsTitre}</h2>
           {boissons.map((r) => <Section key={r.id} r={r} locale={locale} />)}
           <a href={site.pdfBoissons} className="btn btn-ligne text-bois hover:bg-bois hover:text-creme">{t.pdf}</a>

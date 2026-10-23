@@ -5,6 +5,7 @@ import { site } from "@/content/site";
 import { avantOuverture } from "@/lib/saison";
 import LangSwitch from "./LangSwitch";
 import HeaderFond from "./HeaderFond";
+import BarreMobile from "./BarreMobile";
 import { Phone } from "lucide-react";
 
 /**
@@ -14,7 +15,13 @@ import { Phone } from "lucide-react";
 export default function Header({ locale, page }: { locale: Locale; page: "home" | "carte" | "legal" }) {
   const t = dict[locale];
   const r = routes[locale];
+  const actions = [
+    ...(page === "home" ? [{ href: r.carte, label: t.nav.carte, icone: "carte" as const }] : []),
+    { href: site.liens.googleMaps, label: t.infos.itineraire, icone: "itineraire" as const, externe: true },
+    { href: site.tel.lien, label: t.nav.appeler, icone: "tel" as const },
+  ];
   return (
+    <>
     <header className="fixed inset-x-0 top-0 z-50">
       {avantOuverture() && (
         <p className="bg-bois px-4 pt-[max(0.5rem,env(safe-area-inset-top))] pb-2 text-center font-display text-lg leading-tight tracking-wide text-creme sm:text-xl">
@@ -45,5 +52,7 @@ export default function Header({ locale, page }: { locale: Locale; page: "home" 
         </nav>
       </HeaderFond>
     </header>
+    {page !== "legal" && <BarreMobile actions={actions} />}
+    </>
   );
 }

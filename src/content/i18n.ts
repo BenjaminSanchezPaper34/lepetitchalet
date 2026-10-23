@@ -17,7 +17,7 @@ export const htmlLang: Record<Locale, string> = { fr: "fr", es: "es", en: "en" }
 export const dict = {
   fr: {
     langName: "Français",
-    nav: { carte: "La carte", infos: "Infos pratiques", avis: "Avis", reserver: "Réserver", accueil: "Accueil" },
+    nav: { carte: "La carte", infos: "Infos pratiques", avis: "Avis", reserver: "Réserver", accueil: "Accueil", appeler: "Appeler" },
     ouverture: {
       bandeau: "Ouverture le vendredi 4 décembre 2026",
       court: "Ouverture le 4 décembre",
@@ -94,7 +94,7 @@ export const dict = {
   },
   es: {
     langName: "Español",
-    nav: { carte: "La carta", infos: "Información", avis: "Opiniones", reserver: "Reservar", accueil: "Inicio" },
+    nav: { carte: "La carta", infos: "Información", avis: "Opiniones", reserver: "Reservar", accueil: "Inicio", appeler: "Llamar" },
     ouverture: {
       bandeau: "Apertura el viernes 4 de diciembre de 2026",
       court: "Apertura el 4 de diciembre",
@@ -171,7 +171,7 @@ export const dict = {
   },
   en: {
     langName: "English",
-    nav: { carte: "Menu", infos: "Practical info", avis: "Reviews", reserver: "Book", accueil: "Home" },
+    nav: { carte: "Menu", infos: "Practical info", avis: "Reviews", reserver: "Book", accueil: "Home", appeler: "Call" },
     ouverture: {
       bandeau: "Opening Friday 4 December 2026",
       court: "Opening 4 December",

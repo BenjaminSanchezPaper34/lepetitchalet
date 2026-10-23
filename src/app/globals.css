@@ -22,7 +22,7 @@
 }
 
 @layer base {
-  html { -webkit-text-size-adjust: 100%; scroll-padding-top: 7rem; }
+  html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--h-entete) + 1rem); }
   body {
     background: var(--color-creme);
     color: var(--color-nuit);
@@ -88,9 +88,18 @@
 /* Reveal au scroll : état initial posé en CSS (pas de flash), GSAP anime ensuite.
  * Sans JS ou en reduced-motion, tout reste visible. */
 .js [data-reveal] { opacity: 0; transform: translateY(40px); }
+@media (max-width: 767px) { .js [data-reveal] { transform: translateY(20px); } }
 @media (prefers-reduced-motion: reduce) {
   .js [data-reveal] { opacity: 1 !important; transform: none !important; }
   html { scroll-behavior: auto; }
+}
+
+/* Hauteur de l'en-tête fixe, mesurée en JS (HeaderFond) ; valeur de repli avant mesure */
+:root { --h-entete: 6.5rem; }
+
+/* Barre d'actions mobile : la fin de page ne passe jamais dessous */
+@media (max-width: 767px) {
+  body:has(nav[aria-label="Actions rapides"]) { padding-bottom: calc(3.5rem + env(safe-area-inset-bottom)); }
 }
 
 /* Lenis */
