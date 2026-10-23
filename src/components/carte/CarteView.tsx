@@ -4,12 +4,12 @@ import { site } from "@/content/site";
 import OngletsCarte from "./OngletsCarte";
 
 function Prix({ prix, locale }: { prix: Rubrique["plats"][number]["prix"]; locale: Locale }) {
-  if (typeof prix === "number") return <span className="font-display text-2xl text-bois">{formatPrix(prix, locale)}</span>;
+  if (typeof prix === "number") return <span className="whitespace-nowrap text-xl text-bois tabular-nums">{formatPrix(prix, locale)}</span>;
   return (
     <span className="flex gap-3 text-right">
       {prix.map((p) => (
         <span key={p.label} className="flex flex-col items-end leading-none">
-          <span className="font-display text-2xl text-bois">{formatPrix(p.prix, locale)}</span>
+          <span className="whitespace-nowrap text-xl text-bois tabular-nums">{formatPrix(p.prix, locale)}</span>
           <span className="mt-0.5 text-sm text-ecorce">{p.label}</span>
         </span>
       ))}
@@ -26,7 +26,7 @@ function Section({ r, locale }: { r: Rubrique; locale: Locale }) {
         {r.plats.map((p) => (
           <li key={p.nom} className="py-5">
             <div className="flex items-baseline gap-4">
-              <h3 className="text-lg font-semibold leading-snug">{nomPlat(p, locale)}</h3>
+              <h3 className="text-[1.1875rem] leading-snug">{nomPlat(p, locale)}</h3>
               <span aria-hidden="true" className="flex-1 translate-y-[-0.3rem] border-b border-dotted border-bois/30" />
               <Prix prix={p.prix} locale={locale} />
             </div>

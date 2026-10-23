@@ -41,15 +41,19 @@ du site Muse et des supports print (carte, cartes de visite, stories). Pas de br
 Alternance des fonds : nuit (hero) → crème (ouverture) → nuit (spécialités photo) → crème (carte)
 → crème + texture papier (avis) → bois (pied de page). Deux fonds identiques ne se touchent jamais.
 
-## 2. Typographie (reprise, auto-hébergée)
+## 2. Typographie (alignée sur les supports imprimés, auto-hébergée)
 
-- **Display — Bebas Neue** (OFL, `next/font/local`) : titres de section, nom du plat vedette,
-  date d'ouverture, numéros de téléphone. Toujours en capitales, interlettrage léger. Grands
-  titres en `clamp(2.5rem, 8vw, 6rem)`.
-- **Fonctionnelle — Montserrat** 400/600/700 (OFL, `next/font/local`) : texte, carte, boutons, nav.
-  Corps 16 px minimum, descriptions de plats 14-15 px, 12 px réservé au copyright.
-- **Outfit** (utilisée ponctuellement sur la carte Muse) : **abandonnée** — deux familles suffisent.
-- Aucun CDN de polices.
+- **Display — Bebas Neue** (OFL, `next/font/local`) : titres de section, date d'ouverture.
+  Toujours en capitales. Grands titres en `clamp(2.5rem, 8vw, 6rem)`. Proche du Gotham Condensed
+  Bold des titres de la carte papier. La police du logo (American Captain, The Fontry) serait
+  l'écho idéal mais exige une licence commerciale : non retenue au 23/10/2026.
+- **Fonctionnelle — Outfit** 400/600/700 (OFL) : texte, carte (plats et prix), boutons, nav.
+  C'est la police de texte de la carte imprimée : le site et le papier parlent la même langue.
+  Corps 16 px minimum, descriptions 15 px, 12 px réservé au copyright.
+- **Sur-titres — Crimson Pro** 500 (OFL) en capitales très espacées (0,28 em) : l'écho de
+  « RESTAURANT » sous le logo (Minion Pro, non utilisable en auto-hébergement). Uniquement pour
+  la classe `.kicker`, jamais pour du texte courant.
+- Montserrat : abandonnée le 23/10/2026. Aucun CDN de polices.
 
 ## 3. Matière
 

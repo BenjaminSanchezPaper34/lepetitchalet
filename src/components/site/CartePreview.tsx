@@ -26,7 +26,7 @@ export default function CartePreview({ locale }: { locale: Locale }) {
             <li key={p.nom} className="flex items-baseline gap-4 py-4">
               <span className="font-semibold">{nomPlat(p, locale)}</span>
               <span aria-hidden="true" className="flex-1 border-b border-dotted border-bois/30" />
-              <span className="font-display text-2xl text-bois">{typeof p.prix === "number" ? formatPrix(p.prix, locale) : ""}</span>
+              <span className="whitespace-nowrap text-xl text-bois tabular-nums">{typeof p.prix === "number" ? formatPrix(p.prix, locale) : ""}</span>
             </li>
           ))}
         </ul>

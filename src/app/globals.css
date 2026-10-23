@@ -14,7 +14,8 @@
   --color-braise: #e0a36a;      /* uniquement la lueur du grill */
 
   --font-display: var(--font-bebas), "Bebas Neue", Impact, sans-serif;
-  --font-sans: var(--font-montserrat), Montserrat, system-ui, sans-serif;
+  --font-sans: var(--font-outfit), Outfit, system-ui, sans-serif;
+  --font-serif: var(--font-crimson), "Minion Pro", Georgia, serif;
 
   --radius-carte: 1rem;
   --shadow-bois: 0 18px 40px -18px rgb(106 68 48 / 0.35);
@@ -45,10 +46,12 @@
     letter-spacing: 0.01em;
     text-transform: uppercase;
   }
+  /* Sur-titre : serif en capitales très espacées, l'écho de « RESTAURANT » sous le logo */
   .kicker {
-    font-size: 0.875rem;
-    font-weight: 700;
-    letter-spacing: 0.16em;
+    font-family: var(--font-serif);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    letter-spacing: 0.28em;
     text-transform: uppercase;
     color: var(--color-ecorce);
   }

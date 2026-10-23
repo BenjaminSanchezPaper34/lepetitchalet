@@ -33,7 +33,7 @@ export default function Hero({ locale }: { locale: Locale }) {
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-nuit via-nuit/40 to-nuit/30" />
 
       <div data-fade-out className="mx-auto w-full max-w-6xl px-5 pt-44 pb-12 sm:px-8 sm:pb-20">
-        <p className="kicker !text-creme/80">{t.hero.kicker}</p>
+        <p className="kicker !text-creme [text-shadow:0_1px_10px_rgb(0_0_0/0.75)]">{t.hero.kicker}</p>
         <h1 className="mt-3 max-w-4xl font-display text-[clamp(3rem,11vw,7.5rem)] leading-[0.9] uppercase">
           {t.hero.titre}
         </h1>
