@@ -19,7 +19,8 @@ export const site = {
     tripadvisor: "https://www.tripadvisor.fr/Restaurant_Review-g315773-d34035091-Reviews-Le_Petit_Chalet-Pas_de_la_Casa_Encamp_Parish.html",
     googleMaps: "https://maps.google.com/?cid=12951499873152251961",
     googleAvis: "https://g.page/r/CTm4wb-D-LyzEBM/review",
-    applePlans: "https://maps.apple.com/?q=Le+Petit+Chalet&ll=42.53918,1.73341",
+    // Fiche Apple Plans de l'établissement (place-id), fournie par Benjamin le 23/10/2026
+    applePlans: "https://maps.apple.com/place?place-id=I20EDD5C6DDB75DC4&address=Avinguda+d%27Encamp%2C+39%2C+AD200+El+Pas+De+La+Casa%2C+Andorre&coordinate=42.539292%2C1.733559&name=Le+Petit+Chalet&_provider=9902",
     waze: "https://waze.com/ul?ll=42.53918,1.73341&navigate=yes",
   },
   pdfBoissons: "/assets/menunumerique-boissons-lepetitchalet.pdf",
