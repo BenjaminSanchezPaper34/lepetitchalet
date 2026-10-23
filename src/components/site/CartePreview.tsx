@@ -4,7 +4,7 @@ import { carte, formatPrix, nomPlat } from "@/content/menu";
 import { site } from "@/content/site";
 
 /** Aperçu de la carte : quelques incontournables avec leur prix, puis lien vers tout. */
-const vedettes = ["Raclette classique", "Fondue savoyarde", "Tartiflette", "Entrecôte", "Burger montagnard", "Montagnarde"];
+const vedettes = ["Raclette classique", "Fondue savoyarde", "Tartiflette", "Entrecôte", "Burger montagnard", "Mont d’Or entier"];
 
 export default function CartePreview({ locale }: { locale: Locale }) {
   const t = dict[locale].cartePreview;

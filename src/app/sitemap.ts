@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { routes } from "@/content/i18n";
 import { site } from "@/content/site";
 
-const maj = new Date("2026-09-25");
+const maj = new Date("2026-10-23");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const pages = (["home", "carte"] as const).flatMap((p) =>

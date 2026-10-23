@@ -20,7 +20,7 @@ export function RestaurantLd({ locale }: { locale: Locale }) {
     telephone: "+376855436",
     email: site.email,
     priceRange: "20–30 €",
-    servesCuisine: ["Savoyarde", "Montagnarde", "Raclette", "Fondue", "Grillades", "Pizza"],
+    servesCuisine: ["Savoyarde", "Montagnarde", "Raclette", "Fondue", "Grillades"],
     acceptsReservations: true,
     hasMenu: `${u}${routes[locale].carte}`,
     address: {

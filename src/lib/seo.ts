@@ -22,15 +22,15 @@ const meta: Record<Page, Record<Locale, { title: string; description: string }>>
   carte: {
     fr: {
       title: "La carte du Petit Chalet — raclette, fondue, grill Josper · Pas de la Case",
-      description: "Toute la carte du Petit Chalet au Pas de la Case avec les prix : raclettes, fondues, viandes et poissons au grill Josper, pâtes, pizzas, desserts maison, boissons.",
+      description: "Toute la carte du Petit Chalet au Pas de la Case avec les prix : raclettes, fondues, viandes et poissons au grill Josper, pâtes, desserts maison, boissons.",
     },
     es: {
       title: "La carta de Le Petit Chalet — raclette, fondue, brasa Josper · Pas de la Casa",
-      description: "Toda la carta de Le Petit Chalet en Pas de la Casa con precios: raclettes, fondues, carnes y pescados a la brasa Josper, pasta, pizzas, postres caseros, bebidas.",
+      description: "Toda la carta de Le Petit Chalet en Pas de la Casa con precios: raclettes, fondues, carnes y pescados a la brasa Josper, pasta, postres caseros, bebidas.",
     },
     en: {
       title: "Le Petit Chalet menu — raclette, fondue, Josper grill · Pas de la Casa",
-      description: "The full Le Petit Chalet menu in Pas de la Casa with prices: raclette, fondue, Josper-grilled meats and fish, pasta, pizzas, homemade desserts, drinks.",
+      description: "The full Le Petit Chalet menu in Pas de la Casa with prices: raclette, fondue, Josper-grilled meats and fish, pasta, homemade desserts, drinks.",
     },
   },
 };
