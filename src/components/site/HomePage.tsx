@@ -7,6 +7,7 @@ import Grill from "./Grill";
 import CartePreview from "./CartePreview";
 import Avis from "./Avis";
 import Infos from "./Infos";
+import Partenaires from "./Partenaires";
 import Footer from "./Footer";
 import { RestaurantLd } from "./JsonLd";
 
@@ -23,6 +24,7 @@ export default function HomePage({ locale }: { locale: Locale }) {
         <CartePreview locale={locale} />
         <Avis locale={locale} />
         <Infos locale={locale} />
+        <Partenaires locale={locale} />
       </main>
       <Footer locale={locale} />
     </>

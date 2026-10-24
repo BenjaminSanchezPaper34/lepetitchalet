@@ -30,14 +30,16 @@ export default function Hero({ locale }: { locale: Locale }) {
         <Poster />
         <HeroVideo />
       </div>
-      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-nuit via-nuit/40 to-nuit/30" />
+      {/* Voile : la neige claire de la vidéo mange le texte blanc → dégradé plus dense en bas + halo sombre côté texte */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-nuit via-nuit/65 to-nuit/30" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_90%_70%_at_15%_85%,rgb(29_29_31/0.7),transparent_70%)]" />
 
       <div data-fade-out className="mx-auto w-full max-w-6xl px-5 pt-44 pb-12 sm:px-8 sm:pb-20">
         <p className="kicker !text-creme [text-shadow:0_1px_10px_rgb(0_0_0/0.75)]">{t.hero.kicker}</p>
-        <h1 className="mt-3 max-w-4xl font-display text-[clamp(3rem,11vw,7.5rem)] leading-[0.9] uppercase">
+        <h1 className="mt-3 max-w-4xl font-display [text-shadow:0_2px_24px_rgb(0_0_0/0.55)] text-[clamp(3rem,11vw,7.5rem)] leading-[0.9] uppercase">
           {t.hero.titre}
         </h1>
-        <p className="mt-5 max-w-xl text-lg leading-relaxed text-creme/90">
+        <p className="mt-5 max-w-xl text-lg leading-relaxed text-creme [text-shadow:0_1px_12px_rgb(0_0_0/0.7)]">
           {avantOuverture() ? t.hero.sous : t.hero.sousOuvert}
         </p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">

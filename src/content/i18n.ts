@@ -78,6 +78,11 @@ export const dict = {
       whatsapp: "WhatsApp",
       acces: "Au centre du Pas de la Case, à deux pas des pistes de Grandvalira et de la frontière française.",
     },
+    partenaires: {
+      kicker: "Nos partenaires",
+      titre: "Nos voisins du Pas de la Case",
+      intro: "Pour dormir au pied des pistes après le dîner, nos partenaires andorrans vous accueillent à deux pas du restaurant.",
+    },
     footer: {
       suivre: "Suivez-nous",
       mentions: "Mentions légales",
@@ -155,6 +160,11 @@ export const dict = {
       whatsapp: "WhatsApp",
       acces: "En el centro del Pas de la Casa, a dos pasos de las pistas de Grandvalira y de la frontera francesa.",
     },
+    partenaires: {
+      kicker: "Nuestros socios",
+      titre: "Nuestros vecinos del Pas de la Casa",
+      intro: "Para dormir a pie de pistas después de cenar, nuestros socios andorranos le reciben a dos pasos del restaurante.",
+    },
     footer: {
       suivre: "Síguenos",
       mentions: "Aviso legal",
@@ -231,6 +241,11 @@ export const dict = {
       itineraire: "Directions",
       whatsapp: "WhatsApp",
       acces: "In the centre of Pas de la Casa, a short walk from the Grandvalira slopes and the French border.",
+    },
+    partenaires: {
+      kicker: "Our partners",
+      titre: "Our neighbours in Pas de la Casa",
+      intro: "To stay at the foot of the slopes after dinner, our Andorran partners welcome you just steps from the restaurant.",
     },
     footer: {
       suivre: "Follow us",
