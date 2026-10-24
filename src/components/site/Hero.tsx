@@ -4,6 +4,7 @@ import { dict, routes, type Locale } from "@/content/i18n";
 import { site } from "@/content/site";
 import { avantOuverture } from "@/lib/saison";
 import HeroVideo from "./HeroVideo";
+import { MessageCircle } from "lucide-react";
 import posterDesktop from "../../../public/video/hero-poster.webp";
 import posterPhone from "../../../public/video/hero-poster-phone.webp";
 
@@ -34,16 +35,21 @@ export default function Hero({ locale }: { locale: Locale }) {
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-nuit via-nuit/65 to-nuit/30" />
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_90%_70%_at_15%_85%,rgb(29_29_31/0.7),transparent_70%)]" />
 
+      {/* Textes en blanc pur sur la vidéo (demande de Benjamin, 24/10/2026) : seule exception au « jamais de blanc pur » */}
       <div data-fade-out className="mx-auto w-full max-w-6xl px-5 pt-44 pb-12 sm:px-8 sm:pb-20">
-        <p className="kicker !text-creme [text-shadow:0_1px_10px_rgb(0_0_0/0.75)]">{t.hero.kicker}</p>
-        <h1 className="mt-3 max-w-4xl font-display [text-shadow:0_2px_24px_rgb(0_0_0/0.55)] text-[clamp(3rem,11vw,7.5rem)] leading-[0.9] uppercase">
+        <p className="kicker !text-white [text-shadow:0_1px_10px_rgb(0_0_0/0.75)]">{t.hero.kicker}</p>
+        <h1 className="mt-3 max-w-4xl font-display text-white [text-shadow:0_2px_24px_rgb(0_0_0/0.55)] text-[clamp(3rem,11vw,7.5rem)] leading-[0.9] uppercase">
           {t.hero.titre}
         </h1>
-        <p className="mt-5 max-w-xl text-lg leading-relaxed text-creme [text-shadow:0_1px_12px_rgb(0_0_0/0.7)]">
+        <p className="mt-5 max-w-xl text-lg leading-relaxed text-white [text-shadow:0_1px_12px_rgb(0_0_0/0.7)]">
           {avantOuverture() ? t.hero.sous : t.hero.sousOuvert}
         </p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <a href={site.tel.lien} className="btn btn-bois whitespace-nowrap text-base sm:text-lg">{t.hero.cta}<span className="font-semibold opacity-80">· {site.tel.affiche}</span></a>
+          {/* Réservation par message en premier : gratuite pour les vacanciers (appeler l'Andorre coûte cher hors UE) */}
+          <a href={site.whatsappAvecMessage(t.infos.whatsappMessage)} target="_blank" rel="noopener" className="btn btn-bois whitespace-nowrap text-base sm:text-lg">
+            <MessageCircle aria-hidden="true" className="h-5 w-5" />
+            {t.hero.cta}
+          </a>
           <Link href={routes[locale].carte} className="btn btn-ligne text-base text-creme hover:bg-creme hover:text-nuit sm:text-lg">{t.hero.carte}</Link>
         </div>
       </div>

@@ -18,8 +18,8 @@ export default function Header({ locale, page }: { locale: Locale; page: "home" 
   const actions = [
     ...(page === "home" ? [{ href: r.carte, label: t.nav.carte, icone: "carte" as const }] : []),
     { href: site.liens.googleMaps, label: t.infos.itineraire, icone: "itineraire" as const, externe: true },
-    { href: site.whatsappAvecMessage(t.infos.whatsappMessage), label: t.infos.whatsapp, icone: "whatsapp" as const, externe: true },
     { href: site.tel.lien, label: t.nav.appeler, icone: "tel" as const },
+    { href: site.whatsappAvecMessage(t.infos.whatsappMessage), label: t.infos.whatsapp, icone: "whatsapp" as const, externe: true },
   ];
   return (
     <>

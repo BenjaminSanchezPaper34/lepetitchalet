@@ -86,7 +86,7 @@ Alternance des fonds : nuit (hero) → crème (ouverture) → nuit (spécialité
 - Pas de chat WhatsApp flottant tiers : un lien `wa.me` natif.
 - Pas de PDF comme carte principale : la carte est en HTML (indexable, lisible au doigt) ; les PDF
   restent en téléchargement secondaire.
-- Pas de blanc pur, pas de gris neutres, pas de glassmorphism.
+- Pas de blanc pur (seule exception : les textes du hero sur la vidéo, en blanc pour ressortir — validé par Benjamin le 24/10/2026), pas de gris neutres, pas de glassmorphism.
 - Toujours : esthétique template gratuit, presets ReactBits d'origine, deux moteurs sur un même élément.
 
 ---
