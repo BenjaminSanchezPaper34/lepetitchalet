@@ -9,7 +9,8 @@ type Onglet = { id: string; label: string };
  * Onglets de la carte : défilement horizontal au doigt, au trackpad et par flèches.
  * - Les flèches n'apparaissent que du côté où il reste des onglets cachés (fondu crème).
  * - L'onglet de la rubrique en cours de lecture s'allume et revient dans le champ.
- * - data-lenis-prevent : Lenis ne capte pas la molette ici, le défilement horizontal reste natif.
+ * - data-lenis-prevent-horizontal : Lenis laisse le geste horizontal natif, mais garde la molette verticale
+ *   fluide (un data-lenis-prevent complet faisait sauter la page quand la souris passait dessus).
  */
 const FLECHES = {
   fr: ["Onglets précédents", "Onglets suivants"],
@@ -74,7 +75,7 @@ export default function OngletsCarte({ onglets, locale }: { onglets: Onglet[]; l
     <div className="relative mx-auto max-w-4xl">
       <ul
         ref={liste}
-        data-lenis-prevent
+        data-lenis-prevent-horizontal
         className="flex gap-1 overflow-x-auto overscroll-x-contain px-4 py-2 [scrollbar-width:none] sm:px-8 [&::-webkit-scrollbar]:hidden"
       >
         {onglets.map((o) => (

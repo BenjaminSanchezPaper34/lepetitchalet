@@ -13,28 +13,28 @@ export const site = {
   ouverture: "2026-12-04",
   finSaison: "2027-04-30",
   note: { valeur: 4.8, nombre: 118 },
-  /** Partenaires andorrans (section en bas de l'accueil). `url` à renseigner quand Benjamin aura les sites officiels. */
+  /** Partenaires andorrans (section en bas de l'accueil). Sites fournis par Benjamin le 24/10/2026. */
   partenaires: [
     {
       nom: "Frontera Blanca",
       logo: "/images/partenaires/frontera-blanca.webp",
       largeur: 640, hauteur: 198,
       desc: { fr: "Résidence au pied des pistes, avenue d’Encamp", es: "Residencia a pie de pistas, avenida d’Encamp", en: "Ski-in residence on Avinguda d’Encamp" },
-      url: undefined as string | undefined,
+      url: "https://www.fronterablanca.com/fr/" as string | undefined,
     },
     {
       nom: "Apartaments Moblats Pas",
       logo: "/images/partenaires/apartaments-moblats-pas.webp",
       largeur: 425, hauteur: 320,
       desc: { fr: "Appartements meublés à louer au Pas de la Case", es: "Apartamentos amueblados en alquiler en el Pas de la Casa", en: "Furnished apartments to rent in Pas de la Casa" },
-      url: undefined as string | undefined,
+      url: "https://www.apartamentospasdelacasa.com/apartaments-moblats-pas-accueil/" as string | undefined,
     },
     {
       nom: "LCB Gestió d’Apartaments",
       logo: "/images/partenaires/lcb-gestio-apartaments.webp",
       largeur: 558, hauteur: 320,
       desc: { fr: "Gestion et location d’appartements au pied des pistes", es: "Gestión y alquiler de apartamentos a pie de pistas", en: "Apartment management and rentals by the slopes" },
-      url: undefined as string | undefined,
+      url: "https://lcb-apartaments-apartment.andorrahotels.net/fr/" as string | undefined,
     },
   ],
   liens: {

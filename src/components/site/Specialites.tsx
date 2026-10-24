@@ -23,7 +23,7 @@ export default function Specialites({ locale }: { locale: Locale }) {
         {/* Mobile : carrousel au doigt (la carte suivante dépasse pour inviter à glisser) ; grille dès 768 px */}
         <ul
           data-reveal-group
-          data-lenis-prevent
+          data-lenis-prevent-horizontal
           className="-mx-5 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 [scrollbar-width:none] md:mx-0 md:mt-12 md:grid md:grid-cols-3 md:gap-8 md:overflow-visible md:px-0 [&::-webkit-scrollbar]:hidden"
         >
           {t.items.map((it) => (
