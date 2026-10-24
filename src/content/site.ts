@@ -10,7 +10,11 @@ export const site = {
   /** Lien WhatsApp avec message de réservation pré-rempli (WhatsApp évite au client le coût d'un appel vers l'Andorre, hors UE) */
   whatsappAvecMessage: (message: string) => `https://wa.me/376385568?text=${encodeURIComponent(message)}`,
   email: "Seb934@hotmail.fr",
-  horaires: { ouvre: "11:00", ferme: "23:00" },
+  /** Horaires de début de saison 2026-2027 (Seb, 24/10/2026) : midi et soir en semaine, en continu le week-end */
+  horaires: {
+    semaine: [{ ouvre: "12:00", ferme: "15:00" }, { ouvre: "18:00", ferme: "23:00" }],
+    weekend: [{ ouvre: "11:00", ferme: "23:00" }],
+  },
   /** Saison 2026-2027 : premier jour d'ouverture */
   ouverture: "2026-12-04",
   finSaison: "2027-04-30",
@@ -21,21 +25,21 @@ export const site = {
       nom: "Frontera Blanca",
       logo: "/images/partenaires/frontera-blanca.webp",
       largeur: 640, hauteur: 198,
-      desc: { fr: "Résidence au pied des pistes, avenue d’Encamp", es: "Residencia a pie de pistas, avenida d’Encamp", en: "Ski-in residence on Avinguda d’Encamp" },
+      desc: { fr: "Résidence au pied des pistes, avenue d’Encamp", ca: "Residència a peu de pistes, avinguda d’Encamp", es: "Residencia a pie de pistas, avenida d’Encamp", en: "Ski-in residence on Avinguda d’Encamp" },
       url: "https://www.fronterablanca.com/fr/" as string | undefined,
     },
     {
       nom: "Apartaments Moblats Pas",
       logo: "/images/partenaires/apartaments-moblats-pas.webp",
       largeur: 425, hauteur: 320,
-      desc: { fr: "Appartements meublés à louer au Pas de la Case", es: "Apartamentos amueblados en alquiler en el Pas de la Casa", en: "Furnished apartments to rent in Pas de la Casa" },
+      desc: { fr: "Appartements meublés à louer au Pas de la Case", ca: "Apartaments moblats de lloguer al Pas de la Casa", es: "Apartamentos amueblados en alquiler en el Pas de la Casa", en: "Furnished apartments to rent in Pas de la Casa" },
       url: "https://www.apartamentospasdelacasa.com/apartaments-moblats-pas-accueil/" as string | undefined,
     },
     {
       nom: "LCB Gestió d’Apartaments",
       logo: "/images/partenaires/lcb-gestio-apartaments.webp",
       largeur: 558, hauteur: 320,
-      desc: { fr: "Gestion et location d’appartements au pied des pistes", es: "Gestión y alquiler de apartamentos a pie de pistas", en: "Apartment management and rentals by the slopes" },
+      desc: { fr: "Gestion et location d’appartements au pied des pistes", ca: "Gestió i lloguer d’apartaments a peu de pistes", es: "Gestión y alquiler de apartamentos a pie de pistas", en: "Apartment management and rentals by the slopes" },
       url: "https://lcb-apartaments-apartment.andorrahotels.net/fr/" as string | undefined,
     },
   ],

@@ -14,6 +14,7 @@ type Onglet = { id: string; label: string };
  */
 const FLECHES = {
   fr: ["Onglets précédents", "Onglets suivants"],
+  ca: ["Pestanyes anteriors", "Pestanyes següents"],
   es: ["Pestañas anteriores", "Pestañas siguientes"],
   en: ["Previous tabs", "Next tabs"],
 } as const;

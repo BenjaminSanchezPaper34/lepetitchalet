@@ -10,6 +10,10 @@ const meta: Record<Page, Record<Locale, { title: string; description: string }>>
       title: "Restaurant au Pas de la Case — Le Petit Chalet, raclette, fondue & grill Josper",
       description: "Restaurant de montagne au Pas de la Case, au pied des pistes : raclettes, fondue savoyarde, grill Josper, cuisine maison. Ouverture le 4 décembre 2026.",
     },
+    ca: {
+      title: "Restaurant al Pas de la Casa — Le Petit Chalet, raclette, fondue i brasa Josper",
+      description: "Restaurant de muntanya al Pas de la Casa, a peu de pistes: raclettes, fondue savoiana, brasa Josper, cuina casolana. Obertura el 4 de desembre de 2026.",
+    },
     es: {
       title: "Restaurante en Pas de la Casa — Le Petit Chalet, raclette, fondue y brasa Josper",
       description: "Restaurante de montaña en el Pas de la Casa, a pie de pistas: raclettes, fondue saboyana, brasa Josper, cocina casera. Apertura el 4 de diciembre de 2026.",
@@ -24,6 +28,10 @@ const meta: Record<Page, Record<Locale, { title: string; description: string }>>
       title: "La carte du Petit Chalet — raclette, fondue, grill Josper · Pas de la Case",
       description: "Toute la carte du Petit Chalet au Pas de la Case avec les prix : raclettes, fondues, viandes et poissons au grill Josper, pâtes, desserts maison, boissons.",
     },
+    ca: {
+      title: "La carta de Le Petit Chalet — raclette, fondue, brasa Josper · Pas de la Casa",
+      description: "Tota la carta de Le Petit Chalet al Pas de la Casa amb preus: raclettes, fondues, carns i peixos a la brasa Josper, pasta, postres casolanes, begudes.",
+    },
     es: {
       title: "La carta de Le Petit Chalet — raclette, fondue, brasa Josper · Pas de la Casa",
       description: "Toda la carta de Le Petit Chalet en Pas de la Casa con precios: raclettes, fondues, carnes y pescados a la brasa Josper, pasta, postres caseros, bebidas.",
@@ -35,7 +43,7 @@ const meta: Record<Page, Record<Locale, { title: string; description: string }>>
   },
 };
 
-const ogLocale: Record<Locale, string> = { fr: "fr_FR", es: "es_ES", en: "en_GB" };
+const ogLocale: Record<Locale, string> = { fr: "fr_FR", ca: "ca_ES", es: "es_ES", en: "en_GB" };
 
 export function pageMetadata(page: Page, l: Locale): Metadata {
   const m = meta[page][l];
@@ -47,6 +55,7 @@ export function pageMetadata(page: Page, l: Locale): Metadata {
       canonical: path,
       languages: {
         fr: routes.fr[page],
+        ca: routes.ca[page],
         es: routes.es[page],
         en: routes.en[page],
         "x-default": routes.fr[page],

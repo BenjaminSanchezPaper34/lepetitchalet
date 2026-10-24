@@ -4,9 +4,10 @@ import { bebas, crimson, outfit } from "@/lib/fonts";
 import { htmlLang, type Locale } from "@/content/i18n";
 import SmoothScroll from "./SmoothScroll";
 import TrackClicks from "./TrackClicks";
+import WhatsAppOrdinateur from "./WhatsAppOrdinateur";
 import "../../app/globals.css";
 
-/** Squelette commun aux trois racines de langue (fr, es, en). */
+/** Squelette commun aux quatre racines de langue (fr, ca, es, en). */
 export default function RootShell({ locale, children }: { locale: Locale; children: ReactNode }) {
   return (
     <html lang={htmlLang[locale]} className={`${bebas.variable} ${outfit.variable} ${crimson.variable}`}>
@@ -18,6 +19,7 @@ export default function RootShell({ locale, children }: { locale: Locale; childr
         {children}
         <SmoothScroll />
         <TrackClicks />
+        <WhatsAppOrdinateur />
         <Analytics />
       </body>
     </html>

@@ -9,7 +9,8 @@
 - GPS : 42.53918, 1.73341
 - Téléphone : +376 855 436 · +376 385 568
 - Note Google : 4,8/5 (118 avis)
-- Horaires en saison : tous les jours, 11h00 – 23h00
+- Horaires de début de saison : du lundi au vendredi 12h00 – 15h00 et 18h00 – 23h00 ; samedi et dimanche 11h00 – 23h00
+- Réservation : téléphone +376 855 436 ou WhatsApp +376 385 568 (https://wa.me/376385568)
 - Saison 2026-2027 : réouverture le vendredi 4 décembre 2026 (fermé jusqu’à cette date)
 - Réservations acceptées par téléphone
 - Langues : français, espagnol, catalan, anglais
@@ -84,26 +85,30 @@ Pâtes bolognaise ou poulet pané, une boisson et une boule de glace au choix.
 ## Pages du site
 
 - https://petitchalet.fr/ : accueil, présentation, contact, avis clients
-- https://petitchalet.fr/carte : la carte complète avec prix (aussi en espagnol : https://petitchalet.fr/es/carta, et en anglais : https://petitchalet.fr/en/menu)
-- https://petitchalet.fr/es : version espagnole du site · https://petitchalet.fr/en : version anglaise
+- https://petitchalet.fr/carte : la carte complète avec prix (aussi en catalan : https://petitchalet.fr/ca/carta, en espagnol : https://petitchalet.fr/es/carta, et en anglais : https://petitchalet.fr/en/menu)
+- https://petitchalet.fr/ca : version catalane du site · https://petitchalet.fr/es : version espagnole · https://petitchalet.fr/en : version anglaise
 - https://petitchalet.fr/assets/menunumerique-boissons-lepetitchalet.pdf : carte des boissons (PDF)
 - https://petitchalet.fr/mentions-legales · https://petitchalet.fr/confidentialite
 
 ## FAQ
 
 - Le restaurant est-il ouvert ? Ouverture le vendredi 4 décembre 2026 pour la saison de ski ; fermé jusqu’à cette date.
-- Faut-il réserver ? Réservations acceptées par téléphone au +376 855 436.
+- Faut-il réserver ? Réservations par téléphone au +376 855 436 ou par WhatsApp au +376 385 568 (gratuit depuis un portable étranger, contrairement à un appel vers l’Andorre).
 - Y a-t-il une raclette ? Oui : classique ou Morbier, à partir de 2 personnes, 250 g de fromage par personne.
 - Où est le restaurant ? 39 Avenue d’Encamp, au Pas de la Case (Andorre), au pied des pistes de Grandvalira, à la frontière française.
 
 ## English summary
 
-Le Petit Chalet is a cosy mountain restaurant in Pas de la Casa, Andorra, at the foot of the Grandvalira ski slopes. Raclette, Savoyard fondue, tartiflette, Josper-grilled meats and fish, pasta, homemade desserts, crêpes and waffles. Seasonal venue: closed until Friday 4 December 2026, then open daily 11:00–23:00. Reservations: +376 855 436.
+Le Petit Chalet is a cosy mountain restaurant in Pas de la Casa, Andorra, at the foot of the Grandvalira ski slopes. Raclette, Savoyard fondue, tartiflette, Josper-grilled meats and fish, pasta, homemade desserts, crêpes and waffles. Seasonal venue: closed until Friday 4 December 2026, then open Monday to Friday 12:00–15:00 and 18:00–23:00, Saturday and Sunday 11:00–23:00. Reservations: +376 855 436.
+
+## Resum en català
+
+Le Petit Chalet és un restaurant de muntanya al Pas de la Casa (Andorra), a peu de les pistes de Grandvalira. Raclette, fondue savoiana, tartiflette, carns i peixos a la brasa Josper, pasta i postres casolanes. Tancat fins al divendres 4 de desembre de 2026; després obert de dilluns a divendres de 12.00 a 15.00 h i de 18.00 a 23.00 h, dissabte i diumenge d’11.00 a 23.00 h. Reserves: +376 855 436.
 
 ## Resumen en español
 
-Le Petit Chalet es un restaurante de montaña en el Pas de la Casa (Andorra), a pie de pistas de Grandvalira. Raclette, fondue saboyana, tartiflette, carnes y pescados a la brasa Josper, pasta y postres caseros. Cerrado hasta el viernes 4 de diciembre de 2026; luego abierto todos los días de 11:00 a 23:00. Reservas: +376 855 436.
+Le Petit Chalet es un restaurante de montaña en el Pas de la Casa (Andorra), a pie de pistas de Grandvalira. Raclette, fondue saboyana, tartiflette, carnes y pescados a la brasa Josper, pasta y postres caseros. Cerrado hasta el viernes 4 de diciembre de 2026; luego abierto de lunes a viernes de 12:00 a 15:00 y de 18:00 a 23:00, sábado y domingo de 11:00 a 23:00. Reservas: +376 855 436.
 
 ---
 
-Dernière mise à jour : 23 octobre 2026 (carte 2026-2027).
+Dernière mise à jour : 24 octobre 2026 (horaires de début de saison, version catalane).

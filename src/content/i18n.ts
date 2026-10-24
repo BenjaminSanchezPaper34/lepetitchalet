@@ -1,18 +1,19 @@
 /**
- * Textes du site en trois langues. Le français est la langue source ;
- * l'espagnol et l'anglais sont de vraies traductions (pas de widget).
+ * Textes du site en quatre langues. Le français est la langue source ;
+ * le catalan (langue officielle de l'Andorre), l'espagnol et l'anglais sont de vraies traductions (pas de widget).
  */
-export const locales = ["fr", "es", "en"] as const;
+export const locales = ["fr", "ca", "es", "en"] as const;
 export type Locale = (typeof locales)[number];
 
 /** Chemins publics par langue (le français est à la racine). */
 export const routes = {
   fr: { home: "/", carte: "/carte" },
+  ca: { home: "/ca", carte: "/ca/carta" },
   es: { home: "/es", carte: "/es/carta" },
   en: { home: "/en", carte: "/en/menu" },
 } as const satisfies Record<Locale, { home: string; carte: string }>;
 
-export const htmlLang: Record<Locale, string> = { fr: "fr", es: "es", en: "en" };
+export const htmlLang: Record<Locale, string> = { fr: "fr", ca: "ca", es: "es", en: "en" };
 
 export const dict = {
   fr: {
@@ -25,8 +26,8 @@ export const dict = {
     hero: {
       kicker: "Restaurant de montagne · Pas de la Case, Andorre",
       titre: "Raclette, fondue et grill Josper au pied des pistes",
-      sous: "Une vraie table de montagne au Pas de la Case. On vous accueille dès le vendredi 4 décembre 2026, tous les jours de 11 h à 23 h.",
-      sousOuvert: "Une vraie table de montagne au Pas de la Case, ouverte tous les jours de 11 h à 23 h pendant la saison d’hiver.",
+      sous: "Une vraie table de montagne au Pas de la Case. On vous accueille dès le vendredi 4 décembre 2026 : de 12 h à 15 h et de 18 h à 23 h en semaine, de 11 h à 23 h le week-end.",
+      sousOuvert: "Une vraie table de montagne au Pas de la Case : de 12 h à 15 h et de 18 h à 23 h en semaine, de 11 h à 23 h le week-end.",
       cta: "Réserver une table",
       carte: "Voir la carte",
     },
@@ -35,7 +36,7 @@ export const dict = {
       points: [
         "Restaurant de montagne au 39 avenue d’Encamp, au Pas de la Case, au pied des pistes de Grandvalira.",
         "Raclettes (classique ou Morbier), fondue savoyarde servie dans le pain, Mont d’Or, viandes et poissons au grill Josper, pâtes, desserts maison.",
-        "Ouvert tous les jours de 11 h à 23 h pendant la saison d’hiver — réouverture le vendredi 4 décembre 2026. Réservations au +376 855 436.",
+        "Ouvert de 12 h à 15 h et de 18 h à 23 h en semaine, de 11 h à 23 h le samedi et le dimanche — réouverture le vendredi 4 décembre 2026. Réservations au +376 855 436.",
       ],
     },
     specialites: {
@@ -71,7 +72,7 @@ export const dict = {
       titre: "Nous trouver",
       adresse: "Adresse",
       horaires: "Horaires",
-      horairesTexte: "Tous les jours, 11 h – 23 h (saison d’hiver)",
+      horairesTexte: "Lun.–ven. : 12 h – 15 h et 18 h – 23 h · Sam.–dim. : 11 h – 23 h",
       saison: "Réouverture le vendredi 4 décembre 2026",
       telephone: "Réservations",
       itineraire: "Itinéraire",
@@ -98,6 +99,89 @@ export const dict = {
       allergenes: "Allergènes : notre équipe vous renseigne sur la composition de chaque plat.",
     },
   },
+  ca: {
+    langName: "Català",
+    nav: { carte: "La carta", infos: "Informació", avis: "Opinions", reserver: "Reservar", accueil: "Inici", appeler: "Trucar" },
+    ouverture: {
+      bandeau: "Obertura el divendres 4 de desembre de 2026",
+      court: "Obertura el 4 de desembre",
+    },
+    hero: {
+      kicker: "Restaurant de muntanya · Pas de la Casa, Andorra",
+      titre: "Raclette, fondue i brasa Josper a peu de pistes",
+      sous: "Una autèntica taula de muntanya al Pas de la Casa. Us esperem a partir del divendres 4 de desembre de 2026: de 12.00 a 15.00 h i de 18.00 a 23.00 h entre setmana, d’11.00 a 23.00 h el cap de setmana.",
+      sousOuvert: "Una autèntica taula de muntanya al Pas de la Casa: de 12.00 a 15.00 h i de 18.00 a 23.00 h entre setmana, d’11.00 a 23.00 h el cap de setmana.",
+      cta: "Reservar taula",
+      carte: "Veure la carta",
+    },
+    essentiel: {
+      titre: "L’essencial",
+      points: [
+        "Restaurant de muntanya a l’avinguda d’Encamp 39, al Pas de la Casa, a peu de les pistes de Grandvalira.",
+        "Raclettes (clàssica o Morbier), fondue savoiana servida en pa, Mont d’Or, carns i peixos a la brasa Josper, pasta i postres casolanes.",
+        "Obert de 12.00 a 15.00 h i de 18.00 a 23.00 h de dilluns a divendres, d’11.00 a 23.00 h dissabte i diumenge — reobertura el divendres 4 de desembre de 2026. Reserves: +376 855 436.",
+      ],
+    },
+    specialites: {
+      kicker: "Les nostres especialitats",
+      titre: "Formatge que es fon, brasa que espetega",
+      items: [
+        { titre: "Raclettes", texte: "Clàssica o Morbier: 250 g de formatge per persona, patates grenalla i safata d’embotits.", img: "raclette-meule" },
+        { titre: "Fondue savoiana", texte: "Formatge fos i vi blanc, servida en un pa cruixent. També amb crema de tòfona.", img: "fondue" },
+        { titre: "Tartiflette i Mont d’Or", texte: "Reblochonnade, tartiflette i Mont d’Or sencer al forn: els clàssics dels Alps.", img: "raclette-planche" },
+      ],
+    },
+    grill: {
+      kicker: "A la brasa Josper",
+      titre: "Rostit a la brasa de carbó vegetal",
+      texte: "El Josper és un forn de brasa de carbó vegetal: segellat intens, interior tendre, gust fumat. Entrecot de 350 g, magret sencer, costella de bou d’1,2 kg per compartir, salmó i sípia amb all i julivert.",
+      cta: "Veure carns i peixos",
+    },
+    cartePreview: {
+      kicker: "La carta",
+      titre: "Generosa, de migdia a nit",
+      texte: "Entrants, especialitats de muntanya, brasa, pasta, postres casolanes, creps i gofres — i una carta de vins del Llenguadoc a la Rioja.",
+      cta: "Tota la carta",
+      boissons: "Carta de begudes",
+    },
+    avis: {
+      kicker: "Els nostres clients",
+      titre: "4,8 sobre 5, 118 opinions a Google",
+      voir: "Llegir totes les opinions a Google",
+      laisser: "Deixar una opinió",
+    },
+    infos: {
+      kicker: "Informació pràctica",
+      titre: "Com arribar",
+      adresse: "Adreça",
+      horaires: "Horari",
+      horairesTexte: "Dl.–dv.: 12.00 – 15.00 h i 18.00 – 23.00 h · Ds.–dg.: 11.00 – 23.00 h",
+      saison: "Reobertura el divendres 4 de desembre de 2026",
+      telephone: "Reserves",
+      itineraire: "Com arribar",
+      whatsappMessage: "Hola, voldria reservar una taula a Le Petit Chalet per a … persones, el … a les … h.",
+      whatsapp: "WhatsApp",
+      acces: "Al centre del Pas de la Casa, a dos passos de les pistes de Grandvalira i de la frontera francesa.",
+    },
+    partenaires: {
+      kicker: "Els nostres socis",
+      titre: "Els nostres veïns del Pas de la Casa",
+      intro: "Per dormir a peu de pistes després de sopar, els nostres socis andorrans us acullen a dos passos del restaurant.",
+    },
+    footer: {
+      suivre: "Segueix-nos",
+      mentions: "Avís legal",
+      confidentialite: "Privacitat",
+      droits: "Tots els drets reservats",
+    },
+    carte: {
+      titre: "La carta",
+      intro: "Tota la carta del Petit Chalet: especialitats de muntanya, brasa Josper, pasta, postres casolanes. Preus en euros, impostos inclosos.",
+      boissonsTitre: "Begudes",
+      pdf: "Descarregar la carta de begudes (PDF)",
+      allergenes: "Al·lèrgens: el nostre equip us informa sobre la composició de cada plat.",
+    },
+  },
   es: {
     langName: "Español",
     nav: { carte: "La carta", infos: "Información", avis: "Opiniones", reserver: "Reservar", accueil: "Inicio", appeler: "Llamar" },
@@ -108,8 +192,8 @@ export const dict = {
     hero: {
       kicker: "Restaurante de montaña · Pas de la Casa, Andorra",
       titre: "Raclette, fondue y brasa Josper a pie de pistas",
-      sous: "Una auténtica mesa de montaña en el Pas de la Casa. Le esperamos a partir del viernes 4 de diciembre de 2026, todos los días de 11:00 a 23:00.",
-      sousOuvert: "Una auténtica mesa de montaña en el Pas de la Casa, abierta todos los días de 11:00 a 23:00 durante la temporada de invierno.",
+      sous: "Una auténtica mesa de montaña en el Pas de la Casa. Le esperamos a partir del viernes 4 de diciembre de 2026: de 12:00 a 15:00 y de 18:00 a 23:00 entre semana, de 11:00 a 23:00 el fin de semana.",
+      sousOuvert: "Una auténtica mesa de montaña en el Pas de la Casa: de 12:00 a 15:00 y de 18:00 a 23:00 entre semana, de 11:00 a 23:00 el fin de semana.",
       cta: "Reservar mesa",
       carte: "Ver la carta",
     },
@@ -118,7 +202,7 @@ export const dict = {
       points: [
         "Restaurante de montaña en la avenida d’Encamp 39, en el Pas de la Casa, a pie de las pistas de Grandvalira.",
         "Raclettes (clásica o Morbier), fondue saboyana servida en pan, Mont d’Or, carnes y pescados a la brasa Josper, pasta y postres caseros.",
-        "Abierto todos los días de 11:00 a 23:00 durante la temporada de invierno — reapertura el viernes 4 de diciembre de 2026. Reservas: +376 855 436.",
+        "Abierto de 12:00 a 15:00 y de 18:00 a 23:00 entre semana, de 11:00 a 23:00 sábado y domingo — reapertura el viernes 4 de diciembre de 2026. Reservas: +376 855 436.",
       ],
     },
     specialites: {
@@ -154,7 +238,7 @@ export const dict = {
       titre: "Cómo llegar",
       adresse: "Dirección",
       horaires: "Horario",
-      horairesTexte: "Todos los días, 11:00 – 23:00 (temporada de invierno)",
+      horairesTexte: "Lun.–vie.: 12:00 – 15:00 y 18:00 – 23:00 · Sáb.–dom.: 11:00 – 23:00",
       saison: "Reapertura el viernes 4 de diciembre de 2026",
       telephone: "Reservas",
       itineraire: "Cómo llegar",
@@ -191,8 +275,8 @@ export const dict = {
     hero: {
       kicker: "Mountain restaurant · Pas de la Casa, Andorra",
       titre: "Raclette, fondue and Josper grill at the foot of the slopes",
-      sous: "A true mountain table in Pas de la Casa. We welcome you from Friday 4 December 2026, every day from 11 am to 11 pm.",
-      sousOuvert: "A true mountain table in Pas de la Casa, open every day from 11 am to 11 pm during the winter season.",
+      sous: "A true mountain table in Pas de la Casa. We welcome you from Friday 4 December 2026: 12–3 pm and 6–11 pm on weekdays, 11 am – 11 pm at weekends.",
+      sousOuvert: "A true mountain table in Pas de la Casa: 12–3 pm and 6–11 pm on weekdays, 11 am – 11 pm at weekends.",
       cta: "Book a table",
       carte: "See the menu",
     },
@@ -201,7 +285,7 @@ export const dict = {
       points: [
         "Mountain restaurant at 39 avenue d’Encamp, Pas de la Casa, at the foot of the Grandvalira slopes.",
         "Raclette (classic or Morbier), Savoyard fondue served in a bread bowl, Mont d’Or, Josper-grilled meats and fish, pasta, homemade desserts.",
-        "Open daily 11 am – 11 pm during the winter season — reopening Friday 4 December 2026. Bookings: +376 855 436.",
+        "Open 12–3 pm and 6–11 pm Monday to Friday, 11 am – 11 pm Saturday and Sunday — reopening Friday 4 December 2026. Bookings: +376 855 436.",
       ],
     },
     specialites: {
@@ -237,7 +321,7 @@ export const dict = {
       titre: "Find us",
       adresse: "Address",
       horaires: "Opening hours",
-      horairesTexte: "Every day, 11 am – 11 pm (winter season)",
+      horairesTexte: "Mon–Fri: 12–3 pm & 6–11 pm · Sat–Sun: 11 am – 11 pm",
       saison: "Reopening Friday 4 December 2026",
       telephone: "Bookings",
       itineraire: "Directions",

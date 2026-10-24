@@ -7,6 +7,7 @@ import raclettePlanche from "../../../public/photos/raclette-planche.jpg";
 const photos = { fondue, "raclette-meule": racletteMeule, "raclette-planche": raclettePlanche } as const;
 const alts: Record<Locale, Record<keyof typeof photos, string>> = {
   fr: { "raclette-meule": "Raclette : le fromage fond sous l’appareil et coule dans le poêlon", fondue: "Fondue savoyarde servie dans un pain croustillant", "raclette-planche": "Raclette avec plateau de charcuterie et pommes de terre grenailles" },
+  ca: { "raclette-meule": "Raclette: el formatge es fon i cau a la cassoleta", fondue: "Fondue savoiana servida en un pa cruixent", "raclette-planche": "Raclette amb safata d’embotits i patates grenalla" },
   es: { "raclette-meule": "Raclette: el queso se funde y cae en la cazuela", fondue: "Fondue saboyana servida en un pan crujiente", "raclette-planche": "Raclette con tabla de embutidos y patatas baby" },
   en: { "raclette-meule": "Raclette: the cheese melts and pours into the dish", fondue: "Savoyard fondue served in a crusty bread bowl", "raclette-planche": "Raclette with cured meats and baby potatoes" },
 };

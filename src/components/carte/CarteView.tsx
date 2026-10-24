@@ -41,7 +41,7 @@ function Section({ r, locale }: { r: Rubrique; locale: Locale }) {
 
 export default function CarteView({ locale }: { locale: Locale }) {
   const t = dict[locale].carte;
-  const tout = [...carte, { id: "boissons", titre: { fr: t.boissonsTitre, es: t.boissonsTitre, en: t.boissonsTitre } } as const];
+  const tout = [...carte, { id: "boissons", titre: { fr: t.boissonsTitre, ca: t.boissonsTitre, es: t.boissonsTitre, en: t.boissonsTitre } } as const];
   return (
     <>
       {/* Barre de catégories collante : défilement horizontal au doigt, au trackpad et par flèches */}

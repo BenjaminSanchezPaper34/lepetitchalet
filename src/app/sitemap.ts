@@ -1,12 +1,12 @@
 import type { MetadataRoute } from "next";
-import { routes } from "@/content/i18n";
+import { locales, routes } from "@/content/i18n";
 import { site } from "@/content/site";
 
-const maj = new Date("2026-10-23");
+const maj = new Date("2026-10-24");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const pages = (["home", "carte"] as const).flatMap((p) =>
-    (["fr", "es", "en"] as const).map((l) => ({
+    locales.map((l) => ({
       url: site.url + (routes[l][p] === "/" ? "" : routes[l][p]),
       lastModified: maj,
       changeFrequency: "monthly" as const,
@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: {
         languages: {
           fr: site.url + (routes.fr[p] === "/" ? "" : routes.fr[p]),
+          ca: site.url + routes.ca[p],
           es: site.url + routes.es[p],
           en: site.url + routes.en[p],
         },

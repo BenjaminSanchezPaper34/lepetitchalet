@@ -34,14 +34,22 @@ export function RestaurantLd({ locale }: { locale: Locale }) {
     geo: { "@type": "GeoCoordinates", latitude: site.geo.lat, longitude: site.geo.lng },
     hasMap: site.liens.googleMaps,
     openingHoursSpecification: [
-      {
+      ...site.horaires.semaine.map((h) => ({
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        opens: site.horaires.ouvre,
-        closes: site.horaires.ferme,
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: h.ouvre,
+        closes: h.ferme,
         validFrom: site.ouverture,
         validThrough: site.finSaison,
-      },
+      })),
+      ...site.horaires.weekend.map((h) => ({
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Saturday", "Sunday"],
+        opens: h.ouvre,
+        closes: h.ferme,
+        validFrom: site.ouverture,
+        validThrough: site.finSaison,
+      })),
     ],
     ...(avantOuverture() && {
       specialOpeningHoursSpecification: {
@@ -63,7 +71,7 @@ export function MenuLd({ locale }: { locale: Locale }) {
     "@context": "https://schema.org",
     "@type": "Menu",
     "@id": `${site.url}${routes[locale].carte}#menu`,
-    name: `${site.nom} — ${locale === "fr" ? "La carte" : locale === "es" ? "La carta" : "Menu"}`,
+    name: `${site.nom} — ${locale === "fr" ? "La carte" : locale === "en" ? "Menu" : "La carta"}`,
     inLanguage: locale,
     hasMenuSection: carte.map((r) => ({
       "@type": "MenuSection",

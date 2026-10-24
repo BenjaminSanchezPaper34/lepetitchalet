@@ -5,6 +5,7 @@ import grill from "../../../public/photos/grill-josper.jpg";
 
 const alt: Record<Locale, string> = {
   fr: "Pièce de bœuf saisie dans les flammes du grill Josper",
+  ca: "Peça de vedella segellada entre les flames de la brasa Josper",
   es: "Carne de ternera sellada entre las llamas de la brasa Josper",
   en: "Beef searing in the flames of the Josper grill",
 };
