@@ -8,11 +8,11 @@ const meta: Record<Page, Record<Locale, { title: string; description: string }>>
   home: {
     fr: {
       title: "Restaurant au Pas de la Case — Le Petit Chalet, raclette, fondue & grill Josper",
-      description: "Restaurant de montagne au Pas de la Case, au pied des pistes de Grandvalira : raclettes, fondue savoyarde, grill Josper, cuisine maison. Ouverture le 4 décembre 2026.",
+      description: "Restaurant de montagne au Pas de la Case, au pied des pistes : raclettes, fondue savoyarde, grill Josper, cuisine maison. Ouverture le 4 décembre 2026.",
     },
     es: {
       title: "Restaurante en Pas de la Casa — Le Petit Chalet, raclette, fondue y brasa Josper",
-      description: "Restaurante de montaña en el Pas de la Casa, a pie de pistas de Grandvalira: raclettes, fondue saboyana, brasa Josper, cocina casera. Apertura el 4 de diciembre de 2026.",
+      description: "Restaurante de montaña en el Pas de la Casa, a pie de pistas: raclettes, fondue saboyana, brasa Josper, cocina casera. Apertura el 4 de diciembre de 2026.",
     },
     en: {
       title: "Restaurant in Pas de la Casa — Le Petit Chalet, raclette, fondue & Josper grill",
