@@ -2,6 +2,7 @@ import { MapPin, Clock, Phone, MessageCircle, Navigation } from "lucide-react";
 import { dict, type Locale } from "@/content/i18n";
 import { site } from "@/content/site";
 import { avantOuverture } from "@/lib/saison";
+import Horaires from "./Horaires";
 
 export default function Infos({ locale }: { locale: Locale }) {
   const t = dict[locale].infos;
@@ -24,8 +25,8 @@ export default function Infos({ locale }: { locale: Locale }) {
           <div data-reveal>
             <dt className="flex items-center gap-2 font-display text-2xl uppercase text-bois"><Clock aria-hidden="true" className="h-5 w-5" />{t.horaires}</dt>
             <dd className="mt-2 text-lg leading-relaxed">
-              {t.horairesTexte}
-              {avantOuverture() && <><br /><strong className="text-bois">{t.saison}</strong></>}
+              <Horaires texte={t.horairesTexte} />
+              {avantOuverture() && <strong className="block text-bois">{t.saison}</strong>}
             </dd>
           </div>
           <div data-reveal>

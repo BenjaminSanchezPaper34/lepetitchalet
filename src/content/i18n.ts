@@ -26,8 +26,8 @@ export const dict = {
     hero: {
       kicker: "Restaurant de montagne · Pas de la Case, Andorre",
       titre: "Raclette, fondue et grill Josper au pied des pistes",
-      sous: "Une vraie table de montagne au Pas de la Case. On vous accueille dès le vendredi 4 décembre 2026 : de 12 h à 15 h et de 18 h à 23 h en semaine, de 11 h à 23 h le week-end.",
-      sousOuvert: "Une vraie table de montagne au Pas de la Case : de 12 h à 15 h et de 18 h à 23 h en semaine, de 11 h à 23 h le week-end.",
+      sous: "Une vraie table de montagne au Pas de la Case. On vous accueille dès le vendredi 4 décembre 2026.",
+      sousOuvert: "Une vraie table de montagne au Pas de la Case, au pied des pistes de Grandvalira.",
       cta: "Réserver sur WhatsApp",
       carte: "Voir la carte",
     },
@@ -109,8 +109,8 @@ export const dict = {
     hero: {
       kicker: "Restaurant de muntanya · Pas de la Casa, Andorra",
       titre: "Raclette, fondue i brasa Josper a peu de pistes",
-      sous: "Una autèntica taula de muntanya al Pas de la Casa. Us esperem a partir del divendres 4 de desembre de 2026: de 12.00 a 15.00 h i de 18.00 a 23.00 h entre setmana, d’11.00 a 23.00 h el cap de setmana.",
-      sousOuvert: "Una autèntica taula de muntanya al Pas de la Casa: de 12.00 a 15.00 h i de 18.00 a 23.00 h entre setmana, d’11.00 a 23.00 h el cap de setmana.",
+      sous: "Una autèntica taula de muntanya al Pas de la Casa. Us esperem a partir del divendres 4 de desembre de 2026.",
+      sousOuvert: "Una autèntica taula de muntanya al Pas de la Casa, a peu de les pistes de Grandvalira.",
       cta: "Reservar per WhatsApp",
       carte: "Veure la carta",
     },
@@ -192,8 +192,8 @@ export const dict = {
     hero: {
       kicker: "Restaurante de montaña · Pas de la Casa, Andorra",
       titre: "Raclette, fondue y brasa Josper a pie de pistas",
-      sous: "Una auténtica mesa de montaña en el Pas de la Casa. Le esperamos a partir del viernes 4 de diciembre de 2026: de 12:00 a 15:00 y de 18:00 a 23:00 entre semana, de 11:00 a 23:00 el fin de semana.",
-      sousOuvert: "Una auténtica mesa de montaña en el Pas de la Casa: de 12:00 a 15:00 y de 18:00 a 23:00 entre semana, de 11:00 a 23:00 el fin de semana.",
+      sous: "Una auténtica mesa de montaña en el Pas de la Casa. Le esperamos a partir del viernes 4 de diciembre de 2026.",
+      sousOuvert: "Una auténtica mesa de montaña en el Pas de la Casa, a pie de las pistas de Grandvalira.",
       cta: "Reservar por WhatsApp",
       carte: "Ver la carta",
     },
@@ -275,8 +275,8 @@ export const dict = {
     hero: {
       kicker: "Mountain restaurant · Pas de la Casa, Andorra",
       titre: "Raclette, fondue and Josper grill at the foot of the slopes",
-      sous: "A true mountain table in Pas de la Casa. We welcome you from Friday 4 December 2026: 12–3 pm and 6–11 pm on weekdays, 11 am – 11 pm at weekends.",
-      sousOuvert: "A true mountain table in Pas de la Casa: 12–3 pm and 6–11 pm on weekdays, 11 am – 11 pm at weekends.",
+      sous: "A true mountain table in Pas de la Casa. We welcome you from Friday 4 December 2026.",
+      sousOuvert: "A true mountain table in Pas de la Casa, at the foot of the Grandvalira slopes.",
       cta: "Book on WhatsApp",
       carte: "See the menu",
     },

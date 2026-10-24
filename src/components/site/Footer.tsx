@@ -3,6 +3,7 @@ import Link from "next/link";
 import { dict, routes, type Locale } from "@/content/i18n";
 import { site } from "@/content/site";
 import PaperSignature from "../signature/PaperSignature";
+import Horaires from "./Horaires";
 
 export default function Footer({ locale }: { locale: Locale }) {
   const t = dict[locale];
@@ -19,7 +20,7 @@ export default function Footer({ locale }: { locale: Locale }) {
         <div className="font-display text-4xl leading-tight">
           <a href={site.tel.lien} className="block py-1 hover:text-braise">{site.tel.affiche}</a>
           <a href={site.tel2.lien} className="block py-1 hover:text-braise">{site.tel2.affiche}</a>
-          <p className="mt-2 font-sans text-base text-creme/80">{t.infos.horairesTexte}</p>
+          <Horaires texte={t.infos.horairesTexte} className="mt-2 block font-sans text-base text-creme/80" />
         </div>
         <div>
           <p className="kicker !text-creme/70">{t.footer.suivre}</p>

@@ -4,6 +4,7 @@ import { dict, routes, type Locale } from "@/content/i18n";
 import { site } from "@/content/site";
 import { avantOuverture } from "@/lib/saison";
 import HeroVideo from "./HeroVideo";
+import Horaires from "./Horaires";
 import { MessageCircle } from "lucide-react";
 import posterDesktop from "../../../public/video/hero-poster.webp";
 import posterPhone from "../../../public/video/hero-poster-phone.webp";
@@ -44,6 +45,7 @@ export default function Hero({ locale }: { locale: Locale }) {
         <p className="mt-5 max-w-xl text-lg leading-relaxed text-white [text-shadow:0_1px_12px_rgb(0_0_0/0.7)]">
           {avantOuverture() ? t.hero.sous : t.hero.sousOuvert}
         </p>
+        <Horaires texte={t.infos.horairesTexte} className="mt-3 block text-lg font-semibold leading-relaxed text-white [text-shadow:0_1px_12px_rgb(0_0_0/0.7)]" />
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           {/* Réservation par message en premier : gratuite pour les vacanciers (appeler l'Andorre coûte cher hors UE) */}
           <a href={site.whatsappAvecMessage(t.infos.whatsappMessage)} target="_blank" rel="noopener" className="btn btn-bois whitespace-nowrap text-base sm:text-lg">
