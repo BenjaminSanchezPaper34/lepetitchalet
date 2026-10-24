@@ -40,7 +40,7 @@ export default function Infos({ locale }: { locale: Locale }) {
           <a href={site.liens.googleMaps} target="_blank" rel="noopener" className="btn btn-bois"><Navigation aria-hidden="true" className="h-4 w-4" />{t.itineraire} · Google Maps</a>
           <a href={site.liens.applePlans} target="_blank" rel="noopener" className="btn btn-ligne text-bois hover:bg-bois hover:text-creme">Apple Plans</a>
           <a href={site.liens.waze} target="_blank" rel="noopener" className="btn btn-ligne text-bois hover:bg-bois hover:text-creme">Waze</a>
-          <a href={site.whatsapp} target="_blank" rel="noopener" className="btn btn-ligne text-bois hover:bg-bois hover:text-creme"><MessageCircle aria-hidden="true" className="h-4 w-4" />{t.whatsapp}</a>
+          <a href={site.whatsappAvecMessage(t.whatsappMessage)} target="_blank" rel="noopener" className="btn btn-ligne text-bois hover:bg-bois hover:text-creme"><MessageCircle aria-hidden="true" className="h-4 w-4" />{t.whatsapp}</a>
         </div>
       </div>
     </section>

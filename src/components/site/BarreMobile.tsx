@@ -1,14 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { BookOpen, MapPin, Phone } from "lucide-react";
+import { BookOpen, MapPin, MessageCircle, Phone } from "lucide-react";
 
-type Action = { href: string; label: string; icone: "carte" | "itineraire" | "tel"; externe?: boolean };
+type Action = { href: string; label: string; icone: "carte" | "itineraire" | "whatsapp" | "tel"; externe?: boolean };
 
-const ICONES = { carte: BookOpen, itineraire: MapPin, tel: Phone } as const;
+const ICONES = { carte: BookOpen, itineraire: MapPin, whatsapp: MessageCircle, tel: Phone } as const;
 
 /**
- * Barre d'actions mobile, sous le pouce : la carte, l'itinéraire, l'appel.
+ * Barre d'actions mobile, sous le pouce : la carte, l'itinéraire, WhatsApp (message de réservation
+ * pré-rempli, sans coût d'appel international pour les vacanciers), l'appel.
  * Sur l'accueil, apparaît une fois le hero dépassé (le hero a ses propres boutons) ;
  * ailleurs, visible d'emblée. Jamais au-delà de 768 px (le bouton Réserver de l'en-tête prend le relais). Safe area bas respectée (barre d'accueil iPhone).
  */

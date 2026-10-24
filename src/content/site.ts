@@ -7,6 +7,8 @@ export const site = {
   tel: { affiche: "+376 855 436", lien: "tel:+376855436" },
   tel2: { affiche: "+376 385 568", lien: "tel:+376385568" },
   whatsapp: "https://wa.me/376385568",
+  /** Lien WhatsApp avec message de réservation pré-rempli (WhatsApp évite au client le coût d'un appel vers l'Andorre, hors UE) */
+  whatsappAvecMessage: (message: string) => `https://wa.me/376385568?text=${encodeURIComponent(message)}`,
   email: "Seb934@hotmail.fr",
   horaires: { ouvre: "11:00", ferme: "23:00" },
   /** Saison 2026-2027 : premier jour d'ouverture */
