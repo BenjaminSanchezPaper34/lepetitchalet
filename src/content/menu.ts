@@ -53,7 +53,7 @@ export const carte: Rubrique[] = [
       { nom: "Stracciatella", prix: 9,
         desc: { fr: "Focaccia, huile d’olive.", es: "Focaccia, aceite de oliva.", ca: "Focaccia, oli d’oliva.", en: "Focaccia, olive oil." } },
       { nom: "Planche Petit Chalet", nomTr: { es: "Tabla Petit Chalet", ca: "Post Petit Chalet", en: "Petit Chalet sharing board" }, prix: 45,
-        desc: { fr: "Toute notre carte de tapas sur une planche.", es: "Todas nuestras tapas en una tabla.", ca: "Totes les nostres tapes en una post.", en: "Our whole tapas menu on one board." } },
+        desc: { fr: "Toute notre carte de tapas sur une planche, pour 4 personnes.", es: "Todas nuestras tapas en una tabla, para 4 personas.", ca: "Totes les nostres tapes en una post, per a 4 persones.", en: "Our whole tapas menu on one board, for 4 people." } },
     ],
   },
   {
