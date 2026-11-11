@@ -51,7 +51,7 @@ export const dict = {
     grill: {
       kicker: "Au grill Josper",
       titre: "Cuit à la braise de charbon de bois",
-      texte: "Le Josper est un four à braise de charbon de bois : saisie intense, cœur tendre, goût fumé. Entrecôte de 350 g, magret entier, côte de bœuf de 1,2 kg à partager, saumon et seiche en persillade.",
+      texte: "Le Josper est un four à braise de charbon de bois : saisie intense, cœur tendre, goût fumé. Entrecôte de 350 g, magret entier, côte de bœuf de 1,2 kg à partager, saumon et calamars en persillade.",
       cta: "Voir les viandes et poissons",
     },
     cartePreview: {
@@ -94,10 +94,10 @@ export const dict = {
     },
     carte: {
       titre: "La carte",
-      intro: "Toute la carte du Petit Chalet : spécialités montagnardes, grill Josper, pâtes, desserts maison. Prix TTC en euros.",
+      intro: "Toute la carte du Petit Chalet : tapas, spécialités montagnardes, grill Josper, pâtes, desserts maison, menu du midi. Prix TTC en euros.",
       boissonsTitre: "Boissons",
       pdf: "Télécharger la carte des boissons (PDF)",
-      allergenes: "Allergènes : notre équipe vous renseigne sur la composition de chaque plat.",
+      allergenes: "Cahier des allergènes disponible sur demande.",
     },
   },
   ca: {
@@ -135,7 +135,7 @@ export const dict = {
     grill: {
       kicker: "A la brasa Josper",
       titre: "Rostit a la brasa de carbó vegetal",
-      texte: "El Josper és un forn de brasa de carbó vegetal: segellat intens, interior tendre, gust fumat. Entrecot de 350 g, magret sencer, costella de bou d’1,2 kg per compartir, salmó i sípia amb all i julivert.",
+      texte: "El Josper és un forn de brasa de carbó vegetal: segellat intens, interior tendre, gust fumat. Entrecot de 350 g, magret sencer, costella de bou d’1,2 kg per compartir, salmó i calamars amb all i julivert.",
       cta: "Veure carns i peixos",
     },
     cartePreview: {
@@ -178,10 +178,10 @@ export const dict = {
     },
     carte: {
       titre: "La carta",
-      intro: "Tota la carta del Petit Chalet: especialitats de muntanya, brasa Josper, pasta, postres casolanes. Preus en euros, impostos inclosos.",
+      intro: "Tota la carta del Petit Chalet: tapes, especialitats de muntanya, brasa Josper, pasta, postres casolanes, menú de migdia. Preus en euros, impostos inclosos.",
       boissonsTitre: "Begudes",
       pdf: "Descarregar la carta de begudes (PDF)",
-      allergenes: "Al·lèrgens: el nostre equip us informa sobre la composició de cada plat.",
+      allergenes: "Llibre d’al·lèrgens disponible a petició.",
     },
   },
   es: {
@@ -219,7 +219,7 @@ export const dict = {
     grill: {
       kicker: "A la brasa Josper",
       titre: "Asado a la brasa de carbón vegetal",
-      texte: "El Josper es un horno de brasa de carbón vegetal: sellado intenso, interior tierno, sabor ahumado. Entrecot de 350 g, magret entero, chuletón de 1,2 kg para compartir, salmón y sepia con ajo y perejil.",
+      texte: "El Josper es un horno de brasa de carbón vegetal: sellado intenso, interior tierno, sabor ahumado. Entrecot de 350 g, magret entero, chuletón de 1,2 kg para compartir, salmón y calamares con ajo y perejil.",
       cta: "Ver carnes y pescados",
     },
     cartePreview: {
@@ -262,10 +262,10 @@ export const dict = {
     },
     carte: {
       titre: "La carta",
-      intro: "Toda la carta del Petit Chalet: especialidades de montaña, brasa Josper, pasta, postres caseros. Precios en euros, IVA incluido.",
+      intro: "Toda la carta del Petit Chalet: tapas, especialidades de montaña, brasa Josper, pasta, postres caseros, menú del mediodía. Precios en euros, IVA incluido.",
       boissonsTitre: "Bebidas",
       pdf: "Descargar la carta de bebidas (PDF)",
-      allergenes: "Alérgenos: nuestro equipo le informa sobre la composición de cada plato.",
+      allergenes: "Libro de alérgenos disponible a petición.",
     },
   },
   en: {
@@ -303,7 +303,7 @@ export const dict = {
     grill: {
       kicker: "On the Josper grill",
       titre: "Cooked over real charcoal",
-      texte: "The Josper is a charcoal oven-grill: intense sear, tender inside, smoky flavour. 350 g rib-eye, whole duck breast, 1.2 kg côte de bœuf to share, salmon and cuttlefish with garlic and parsley.",
+      texte: "The Josper is a charcoal oven-grill: intense sear, tender inside, smoky flavour. 350 g rib-eye, whole duck breast, 1.2 kg côte de bœuf to share, salmon and squid with garlic and parsley.",
       cta: "See meats and fish",
     },
     cartePreview: {
@@ -346,10 +346,10 @@ export const dict = {
     },
     carte: {
       titre: "The menu",
-      intro: "The full Petit Chalet menu: mountain specialities, Josper grill, pasta, homemade desserts. Prices in euros, tax included.",
+      intro: "The full Petit Chalet menu: tapas, mountain specialities, Josper grill, pasta, homemade desserts, lunch menu. Prices in euros, tax included.",
       boissonsTitre: "Drinks",
       pdf: "Download the drinks menu (PDF)",
-      allergenes: "Allergens: our team will gladly tell you what each dish contains.",
+      allergenes: "Allergen information book available on request.",
     },
   },
 } as const;

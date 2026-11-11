@@ -1,6 +1,6 @@
 import { dict, type Locale } from "@/content/i18n";
 import { boissons, carte, formatPrix, nomPlat, type Rubrique } from "@/content/menu";
-import { site } from "@/content/site";
+import { BookOpenCheck } from "lucide-react";
 import OngletsCarte from "./OngletsCarte";
 
 function Prix({ prix, locale }: { prix: Rubrique["plats"][number]["prix"]; locale: Locale }) {
@@ -39,6 +39,16 @@ function Section({ r, locale }: { r: Rubrique; locale: Locale }) {
   );
 }
 
+/** Mention « cahier des allergènes » : pictogramme + texte, en tête et en pied de carte. */
+function Allergenes({ texte }: { texte: string }) {
+  return (
+    <p className="flex items-center gap-3 w-fit rounded-2xl border border-bois/25 px-4 py-3 text-base text-bois">
+      <BookOpenCheck aria-hidden="true" className="size-5 shrink-0" strokeWidth={1.75} />
+      {texte}
+    </p>
+  );
+}
+
 export default function CarteView({ locale }: { locale: Locale }) {
   const t = dict[locale].carte;
   const tout = [...carte, { id: "boissons", titre: { fr: t.boissonsTitre, ca: t.boissonsTitre, es: t.boissonsTitre, en: t.boissonsTitre } } as const];
@@ -50,15 +60,15 @@ export default function CarteView({ locale }: { locale: Locale }) {
       </nav>
 
       <div className="mx-auto max-w-4xl space-y-16 px-5 py-14 sm:px-8 sm:py-20">
+        <Allergenes texte={t.allergenes} />
         {carte.map((r) => <Section key={r.id} r={r} locale={locale} />)}
 
         <div id="boissons" className="scroll-mt-[calc(var(--h-entete)+4.75rem)] space-y-16 border-t-4 border-double border-bois/30 pt-16">
           <h2 className="titre-section text-bois">{t.boissonsTitre}</h2>
           {boissons.map((r) => <Section key={r.id} r={r} locale={locale} />)}
-          <a href={site.pdfBoissons} className="btn btn-ligne text-bois hover:bg-bois hover:text-creme">{t.pdf}</a>
         </div>
 
-        <p className="text-sm text-ecorce">{t.allergenes}</p>
+        <Allergenes texte={t.allergenes} />
       </div>
     </>
   );

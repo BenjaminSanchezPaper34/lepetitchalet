@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { dict, routes, type Locale } from "@/content/i18n";
 import { carte, formatPrix, nomPlat } from "@/content/menu";
-import { site } from "@/content/site";
 
 /** Aperçu de la carte : quelques incontournables avec leur prix, puis lien vers tout. */
 const vedettes = ["Raclette classique", "Fondue savoyarde", "Tartiflette", "Entrecôte", "Burger montagnard", "Mont d’Or entier"];
@@ -18,7 +17,7 @@ export default function CartePreview({ locale }: { locale: Locale }) {
           <p className="mt-6 text-lg leading-relaxed">{t.texte}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Link href={routes[locale].carte} className="btn btn-bois">{t.cta}</Link>
-            <a href={site.pdfBoissons} className="btn btn-ligne text-bois hover:bg-bois hover:text-creme">{t.boissons}</a>
+            <Link href={`${routes[locale].carte}#boissons`} className="btn btn-ligne text-bois hover:bg-bois hover:text-creme">{t.boissons}</Link>
           </div>
         </div>
         <ul className="divide-y divide-bois/15 border-y border-bois/15" data-reveal>
