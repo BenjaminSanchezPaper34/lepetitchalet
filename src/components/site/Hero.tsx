@@ -5,6 +5,7 @@ import { site } from "@/content/site";
 import { avantOuverture } from "@/lib/saison";
 import HeroVideo from "./HeroVideo";
 import Horaires from "./Horaires";
+import WifiBouton from "./WifiBouton";
 import { MessageCircle } from "lucide-react";
 import posterDesktop from "../../../public/video/hero-poster.webp";
 import posterPhone from "../../../public/video/hero-poster-phone.webp";
@@ -54,6 +55,14 @@ export default function Hero({ locale }: { locale: Locale }) {
           </a>
           <Link href={routes[locale].carte} className="btn btn-ligne text-base text-creme hover:bg-creme hover:text-nuit sm:text-lg">{t.hero.carte}</Link>
         </div>
+        {/* Wi-Fi des clients : un tap copie le mot de passe (le QR code des tables connecte directement) */}
+        <WifiBouton
+          motDePasse={site.wifi.motDePasse}
+          libelle={`${t.infos.wifi} · ${t.infos.wifiCopier}`}
+          libelleCopie={t.infos.wifiCopie}
+          icone="wifi"
+          className="mt-4 inline-flex min-h-11 items-center gap-2 rounded-full px-1 text-sm font-semibold text-white/90 underline-offset-4 [text-shadow:0_1px_10px_rgb(0_0_0/0.7)] hover:underline"
+        />
       </div>
     </section>
   );
