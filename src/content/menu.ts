@@ -19,7 +19,7 @@ export type Rubrique = { id: string; titre: T; intro?: T; plats: Plat[] };
 
 const acc: T = {
   fr: "Accompagnements : pommes de terre grenailles assaisonnées, légumes, frites maison, salade.",
-  es: "Guarniciones: patatas baby aliñadas, verduras, patatas fritas caseras, ensalada.", ca: "Acompanyaments: patates grenalla amanides, verdures, patates fregides casolanes, amanida.",
+  es: "Guarniciones: patatas baby aliñadas, verduras, patatas fritas caseras, ensalada.", ca: "Acompanyaments: patates petites amanides, verdures, patates fregides casolanes, amanida.",
   en: "Sides: seasoned baby potatoes, vegetables, homemade fries, salad.",
 };
 const parPers: T = { fr: "Prix par personne.", es: "Precio por persona.", ca: "Preu per persona.", en: "Price per person." };
@@ -29,7 +29,7 @@ export const carte: Rubrique[] = [
     id: "entrees",
     titre: { fr: "Entrées", es: "Entrantes", ca: "Entrants", en: "Starters" },
     plats: [
-      { nom: "Gratiné à l’oignon", nomTr: { en: "French onion soup" }, prix: 9.9,
+      { nom: "Gratinée à l’oignon", nomTr: { en: "French onion soup" }, prix: 9.9,
         desc: { fr: "Véritable soupe à l’oignon et ses croûtons.", es: "Auténtica sopa de cebolla gratinada con picatostes.", ca: "Autèntica sopa de ceba gratinada amb crostons.", en: "Traditional onion soup with croutons, gratinéed." } },
       { nom: "Salade César", prix: 16.5,
         desc: { fr: "Salade, poulet pané, copeaux de parmesan, croûtons, œuf, tomates cerises.", es: "Ensalada, pollo empanado, lascas de parmesano, picatostes, huevo, tomates cherry.", ca: "Amanida, pollastre arrebossat, encenalls de parmesà, crostons, ou, tomàquets cherry.", en: "Salad, breaded chicken, parmesan shavings, croutons, egg, cherry tomatoes." } },
@@ -47,13 +47,13 @@ export const carte: Rubrique[] = [
         desc: { fr: "4 pièces.", es: "4 unidades.", ca: "4 unitats.", en: "4 pieces." } },
       { nom: "Croquettes de jambon ibérique", nomTr: { es: "Croquetas de jamón ibérico", ca: "Croquetes de pernil ibèric", en: "Iberian ham croquettes" }, prix: 6.5,
         desc: { fr: "5 pièces.", es: "5 unidades.", ca: "5 unitats.", en: "5 pieces." } },
-      { nom: "Assiette de frites maison", nomTr: { es: "Ración de patatas fritas caseras", ca: "Plat de patates fregides casolanes", en: "Homemade fries" }, prix: 5.5 },
+      { nom: "Assiette de frites maison", nomTr: { es: "Ración de patatas fritas caseras", ca: "Ració de patates fregides casolanes", en: "Homemade fries" }, prix: 5.5 },
       { nom: "Empanadas argentines", nomTr: { es: "Empanadas argentinas", ca: "Empanades argentines", en: "Argentinian empanadas" }, prix: 7.5,
         desc: { fr: "2 pièces, garniture selon l’humeur du chef, sauce chimichurri.", es: "2 unidades, relleno según la inspiración del chef, salsa chimichurri.", ca: "2 unitats, farciment segons la inspiració del xef, salsa chimichurri.", en: "2 pieces, filling as the chef sees fit, chimichurri sauce." } },
       { nom: "Stracciatella", prix: 9,
         desc: { fr: "Focaccia, huile d’olive.", es: "Focaccia, aceite de oliva.", ca: "Focaccia, oli d’oliva.", en: "Focaccia, olive oil." } },
-      { nom: "Planche Petit Chalet", nomTr: { es: "Tabla Petit Chalet", ca: "Taula Petit Chalet", en: "Petit Chalet sharing board" }, prix: 45,
-        desc: { fr: "Toute notre carte de tapas sur une planche.", es: "Todas nuestras tapas en una tabla.", ca: "Totes les nostres tapes en una taula.", en: "Our whole tapas menu on one board." } },
+      { nom: "Planche Petit Chalet", nomTr: { es: "Tabla Petit Chalet", ca: "Post Petit Chalet", en: "Petit Chalet sharing board" }, prix: 45,
+        desc: { fr: "Toute notre carte de tapas sur une planche.", es: "Todas nuestras tapas en una tabla.", ca: "Totes les nostres tapes en una post.", en: "Our whole tapas menu on one board." } },
     ],
   },
   {
@@ -61,7 +61,7 @@ export const carte: Rubrique[] = [
     titre: { fr: "Spécialités montagnardes", es: "Especialidades de montaña", ca: "Especialitats de muntanya", en: "Mountain specialities" },
     intro: {
       fr: "Raclettes pour 2 personnes minimum : 250 g de fromage par personne, pommes de terre grenailles assaisonnées et assortiment de charcuterie.",
-      es: "Raclettes para 2 personas mínimo: 250 g de queso por persona, patatas baby aliñadas y tabla de embutidos.", ca: "Raclettes per a 2 persones mínim: 250 g de formatge per persona, patates grenalla amanides i safata d’embotits.",
+      es: "Raclettes para 2 personas mínimo: 250 g de queso por persona, patatas baby aliñadas y tabla de embutidos.", ca: "Raclettes per a 2 persones mínim: 250 g de formatge per persona, patates petites amanides i safata d’embotits.",
       en: "Raclette for 2 people minimum: 250 g of cheese per person, seasoned baby potatoes and a platter of cured meats.",
     },
     plats: [
@@ -77,7 +77,7 @@ export const carte: Rubrique[] = [
         desc: { fr: "Pommes de terre, lardons, reblochon fondu.", es: "Patatas, panceta, reblochon fundido.", ca: "Patates, cansalada, reblochon fos.", en: "Potatoes, bacon lardons, melted reblochon." } },
       { nom: "Lasagne montagnarde", nomTr: { es: "Lasaña de montaña", ca: "Lasanya de muntanya", en: "Mountain lasagne" }, prix: 18.9, desc: { fr: "Jambon de pays, béchamel, fromage à raclette.", es: "Jamón curado, bechamel, queso raclette.", ca: "Pernil salat, beixamel, formatge de raclette.", en: "Cured ham, béchamel, raclette cheese." } },
       { nom: "Camembert au four", nomTr: { es: "Camembert al horno", ca: "Camembert al forn", en: "Baked camembert" }, prix: 22.9,
-        desc: { fr: "Pommes de terre grenailles, charcuterie, miel et noix.", es: "Patatas baby, embutidos, miel y nueces.", ca: "Patates grenalla, embotits, mel i nous.", en: "Baby potatoes, cured meats, honey and walnuts." } },
+        desc: { fr: "Pommes de terre grenailles, charcuterie, miel et noix.", es: "Patatas baby, embutidos, miel y nueces.", ca: "Patates petites, embotits, mel i nous.", en: "Baby potatoes, cured meats, honey and walnuts." } },
       { nom: "Mont d’Or entier", prix: 31.9,
         desc: { fr: "500 g, accompagné de pommes de terre assaisonnées et assortiment de charcuterie.", es: "500 g, con patatas aliñadas y surtido de embutidos.", ca: "500 g, amb patates amanides i assortiment d’embotits.", en: "Whole 500 g, with seasoned potatoes and assorted cured meats." } },
       { nom: "Supplément pommes de terre", nomTr: { es: "Suplemento de patatas", ca: "Suplement de patates", en: "Extra potatoes" }, prix: 5 },
@@ -201,7 +201,7 @@ export const boissons: Rubrique[] = [
     id: "softs", titre: { fr: "Softs", es: "Refrescos", ca: "Refrescos", en: "Soft drinks" },
     plats: [
       { nom: "Coca-Cola 35 cl", prix: 3.8 },
-      { nom: "Coca-Cola Zéro 35 cl", prix: 3.8 },
+      { nom: "Coca-Cola Zéro 35 cl", nomTr: { es: "Coca-Cola Zero 35 cl", ca: "Coca-Cola Zero 35 cl", en: "Coca-Cola Zero 35 cl" }, prix: 3.8 },
       { nom: "Fuze Tea 30 cl", prix: 3.8 },
       { nom: "Aquarius 30 cl", prix: 3.8 },
       { nom: "Sprite 35 cl", prix: 3.8 },
@@ -229,9 +229,9 @@ export const boissons: Rubrique[] = [
   {
     id: "aperitifs", titre: { fr: "Apéritifs & alcools", es: "Aperitivos y licores", ca: "Aperitius i licors", en: "Aperitifs & spirits" },
     plats: [
-      { nom: "Ricard", prix: 3 }, { nom: "Pastis", prix: 3 }, { nom: "Martini blanc", prix: 4 }, { nom: "Martini rouge", prix: 4 },
+      { nom: "Ricard", prix: 3 }, { nom: "Pastis", prix: 3 }, { nom: "Martini blanc", prix: 4 }, { nom: "Martini rouge", nomTr: { es: "Martini rojo", ca: "Martini vermell", en: "Martini Rosso" }, prix: 4 },
       { nom: "Sangria", prix: 5 }, { nom: "Vin chaud", nomTr: { es: "Vino caliente", ca: "Vi calent", en: "Mulled wine" }, prix: 5 }, { nom: "Kir", prix: 4 },
-      { nom: "Rhum Captain Morgan", prix: 5 }, { nom: "Rhum Havana", prix: 5 },
+      { nom: "Rhum Captain Morgan", nomTr: { es: "Ron Captain Morgan", ca: "Rom Captain Morgan", en: "Captain Morgan rum" }, prix: 5 }, { nom: "Rhum Havana", nomTr: { es: "Ron Havana", ca: "Rom Havana", en: "Havana rum" }, prix: 5 },
       { nom: "Whisky Ballantine’s", prix: 5 }, { nom: "Whisky Jack Daniel’s", prix: 6 },
       { nom: "Supplément soda", nomTr: { es: "Suplemento refresco", ca: "Suplement refresc", en: "Soda supplement" }, prix: 3.9 },
     ],
