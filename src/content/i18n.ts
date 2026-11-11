@@ -97,7 +97,7 @@ export const dict = {
       intro: "Toute la carte du Petit Chalet : tapas, spécialités montagnardes, grill Josper, pâtes, desserts maison, menu du midi. Prix TTC en euros.",
       boissonsTitre: "Boissons",
       pdf: "Télécharger la carte des boissons (PDF)",
-      allergenes: "Cahier des allergènes disponible sur demande.",
+      allergenes: "Cet établissement dispose d’informations sur les allergies et intolérances alimentaires : consultez notre personnel.",
     },
   },
   ca: {
@@ -181,7 +181,7 @@ export const dict = {
       intro: "Tota la carta del Petit Chalet: tapes, especialitats de muntanya, brasa Josper, pasta, postres casolanes, menú de migdia. Preus en euros, impostos inclosos.",
       boissonsTitre: "Begudes",
       pdf: "Descarregar la carta de begudes (PDF)",
-      allergenes: "Llibre d’al·lèrgens disponible a petició.",
+      allergenes: "Aquest establiment disposa d’informació sobre al·lèrgies i intoleràncies alimentàries: consulteu el nostre personal.",
     },
   },
   es: {
@@ -265,7 +265,7 @@ export const dict = {
       intro: "Toda la carta del Petit Chalet: tapas, especialidades de montaña, brasa Josper, pasta, postres caseros, menú del mediodía. Precios en euros, IVA incluido.",
       boissonsTitre: "Bebidas",
       pdf: "Descargar la carta de bebidas (PDF)",
-      allergenes: "Libro de alérgenos disponible a petición.",
+      allergenes: "Este establecimiento dispone de información sobre alergias e intolerancias alimentarias: consulte a nuestro personal.",
     },
   },
   en: {
@@ -349,7 +349,7 @@ export const dict = {
       intro: "The full Petit Chalet menu: tapas, mountain specialities, Josper grill, pasta, homemade desserts, lunch menu. Prices in euros, tax included.",
       boissonsTitre: "Drinks",
       pdf: "Download the drinks menu (PDF)",
-      allergenes: "Allergen information book available on request.",
+      allergenes: "Information on food allergies and intolerances is available: please ask our staff.",
     },
   },
 } as const;
