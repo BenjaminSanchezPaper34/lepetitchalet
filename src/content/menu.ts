@@ -26,20 +26,6 @@ const parPers: T = { fr: "Prix par personne.", es: "Precio por persona.", ca: "P
 
 export const carte: Rubrique[] = [
   {
-    id: "entrees",
-    titre: { fr: "Entrées", es: "Entrantes", ca: "Entrants", en: "Starters" },
-    plats: [
-      { nom: "Gratinée à l’oignon", nomTr: { en: "French onion soup" }, prix: 9.9,
-        desc: { fr: "Véritable soupe à l’oignon et ses croûtons.", es: "Auténtica sopa de cebolla gratinada con picatostes.", ca: "Autèntica sopa de ceba gratinada amb crostons.", en: "Traditional onion soup with croutons, gratinéed." } },
-      { nom: "Salade César", prix: 16.5,
-        desc: { fr: "Salade, poulet pané, copeaux de parmesan, croûtons, œuf, tomates cerises.", es: "Ensalada, pollo empanado, lascas de parmesano, picatostes, huevo, tomates cherry.", ca: "Amanida, pollastre arrebossat, encenalls de parmesà, crostons, ou, tomàquets cherry.", en: "Salad, breaded chicken, parmesan shavings, croutons, egg, cherry tomatoes." } },
-      { nom: "Foie gras maison", prix: 19.5,
-        desc: { fr: "Foie gras, accompagné de confiture de figue.", es: "Foie gras casero con mermelada de higo.", ca: "Foie gras casolà amb melmelada de figa.", en: "Homemade foie gras with fig jam." } },
-      { nom: "Saumon gravlax", prix: 16.5,
-        desc: { fr: "Crème d’aneth et ses toasts.", es: "Crema de eneldo y tostadas.", ca: "Crema d’anet i torrades.", en: "Dill cream and toast." } },
-    ],
-  },
-  {
     id: "tapas",
     titre: { fr: "Tapas", es: "Tapas", ca: "Tapes", en: "Tapas" },
     plats: [
@@ -54,6 +40,20 @@ export const carte: Rubrique[] = [
         desc: { fr: "Focaccia, huile d’olive.", es: "Focaccia, aceite de oliva.", ca: "Focaccia, oli d’oliva.", en: "Focaccia, olive oil." } },
       { nom: "Planche Petit Chalet", nomTr: { es: "Tabla Petit Chalet", ca: "Post Petit Chalet", en: "Petit Chalet sharing board" }, prix: 45,
         desc: { fr: "Toute notre carte de tapas sur une planche, pour 4 personnes.", es: "Todas nuestras tapas en una tabla, para 4 personas.", ca: "Totes les nostres tapes en una post, per a 4 persones.", en: "Our whole tapas menu on one board, for 4 people." } },
+    ],
+  },
+  {
+    id: "entrees",
+    titre: { fr: "Entrées", es: "Entrantes", ca: "Entrants", en: "Starters" },
+    plats: [
+      { nom: "Gratinée à l’oignon", nomTr: { en: "French onion soup" }, prix: 9.9,
+        desc: { fr: "Véritable soupe à l’oignon et ses croûtons.", es: "Auténtica sopa de cebolla gratinada con picatostes.", ca: "Autèntica sopa de ceba gratinada amb crostons.", en: "Traditional onion soup with croutons, gratinéed." } },
+      { nom: "Salade César", prix: 16.5,
+        desc: { fr: "Salade, poulet pané, copeaux de parmesan, croûtons, œuf, tomates cerises.", es: "Ensalada, pollo empanado, lascas de parmesano, picatostes, huevo, tomates cherry.", ca: "Amanida, pollastre arrebossat, encenalls de parmesà, crostons, ou, tomàquets cherry.", en: "Salad, breaded chicken, parmesan shavings, croutons, egg, cherry tomatoes." } },
+      { nom: "Foie gras maison", prix: 19.5,
+        desc: { fr: "Foie gras, accompagné de confiture de figue.", es: "Foie gras casero con mermelada de higo.", ca: "Foie gras casolà amb melmelada de figa.", en: "Homemade foie gras with fig jam." } },
+      { nom: "Saumon gravlax", prix: 16.5,
+        desc: { fr: "Crème d’aneth et ses toasts.", es: "Crema de eneldo y tostadas.", ca: "Crema d’anet i torrades.", en: "Dill cream and toast." } },
     ],
   },
   {
