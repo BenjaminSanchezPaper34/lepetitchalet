@@ -78,6 +78,7 @@ export const dict = {
       itineraire: "Itinéraire",
       whatsappMessage: "Bonjour, je souhaite réserver une table au Petit Chalet.\nNombre de personnes : \nDate : \nHeure : \nNom : ",
       whatsapp: "WhatsApp",
+      wifi: "Wi-Fi gratuit", wifiReseau: "Réseau", wifiMdp: "Mot de passe", wifiCopier: "Copier le mot de passe", wifiCopie: "Mot de passe copié",
       acces: "Au centre du Pas de la Case, à deux pas des pistes de Grandvalira et de la frontière française.",
     },
     partenaires: {
@@ -161,6 +162,7 @@ export const dict = {
       itineraire: "Com arribar",
       whatsappMessage: "Hola, voldria reservar una taula a Le Petit Chalet.\nNombre de persones: \nData: \nHora: \nNom: ",
       whatsapp: "WhatsApp",
+      wifi: "Wi-Fi gratuït", wifiReseau: "Xarxa", wifiMdp: "Contrasenya", wifiCopier: "Copiar la contrasenya", wifiCopie: "Contrasenya copiada",
       acces: "Al centre del Pas de la Casa, a dos passos de les pistes de Grandvalira i de la frontera francesa.",
     },
     partenaires: {
@@ -244,6 +246,7 @@ export const dict = {
       itineraire: "Cómo llegar",
       whatsappMessage: "Hola, quisiera reservar una mesa en Le Petit Chalet.\nNúmero de personas: \nFecha: \nHora: \nNombre: ",
       whatsapp: "WhatsApp",
+      wifi: "Wi-Fi gratis", wifiReseau: "Red", wifiMdp: "Contraseña", wifiCopier: "Copiar la contraseña", wifiCopie: "Contraseña copiada",
       acces: "En el centro del Pas de la Casa, a dos pasos de las pistas de Grandvalira y de la frontera francesa.",
     },
     partenaires: {
@@ -327,6 +330,7 @@ export const dict = {
       itineraire: "Directions",
       whatsappMessage: "Hello, I’d like to book a table at Le Petit Chalet.\nNumber of people: \nDate: \nTime: \nName: ",
       whatsapp: "WhatsApp",
+      wifi: "Free Wi-Fi", wifiReseau: "Network", wifiMdp: "Password", wifiCopier: "Copy the password", wifiCopie: "Password copied",
       acces: "In the centre of Pas de la Casa, a short walk from the Grandvalira slopes and the French border.",
     },
     partenaires: {

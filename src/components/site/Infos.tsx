@@ -1,8 +1,9 @@
-import { MapPin, Clock, Phone, MessageCircle, Navigation } from "lucide-react";
+import { MapPin, Clock, Phone, MessageCircle, Navigation, Wifi } from "lucide-react";
 import { dict, type Locale } from "@/content/i18n";
 import { site } from "@/content/site";
 import { avantOuverture } from "@/lib/saison";
 import Horaires from "./Horaires";
+import WifiBouton from "./WifiBouton";
 
 export default function Infos({ locale }: { locale: Locale }) {
   const t = dict[locale].infos;
@@ -34,6 +35,16 @@ export default function Infos({ locale }: { locale: Locale }) {
             <dd className="mt-1 flex flex-col items-start text-lg">
               <a href={site.tel.lien} className="lien inline-flex min-h-11 items-center font-semibold">{site.tel.affiche}</a>
               <a href={site.tel2.lien} className="lien inline-flex min-h-11 items-center">{site.tel2.affiche}</a>
+            </dd>
+          </div>
+          <div data-reveal>
+            <dt className="flex items-center gap-2 font-display text-2xl uppercase text-bois"><Wifi aria-hidden="true" className="h-5 w-5" />{t.wifi}</dt>
+            <dd className="mt-2 text-lg leading-relaxed">
+              {t.wifiReseau} : <strong className="font-semibold">{site.wifi.reseau}</strong>
+              <br />
+              {t.wifiMdp} : <strong className="font-semibold">{site.wifi.motDePasse}</strong>
+              <br />
+              <WifiBouton motDePasse={site.wifi.motDePasse} libelle={t.wifiCopier} libelleCopie={t.wifiCopie} />
             </dd>
           </div>
         </dl>

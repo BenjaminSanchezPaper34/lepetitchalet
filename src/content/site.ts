@@ -6,6 +6,8 @@ export const site = {
   geo: { lat: 42.53918, lng: 1.73341 },
   tel: { affiche: "+376 855 436", lien: "tel:+376855436" },
   tel2: { affiche: "+376 385 568", lien: "tel:+376385568" },
+  /** Wi-Fi clients (public, fourni par Benjamin le 11/11/2026) */
+  wifi: { reseau: "LEPETITCHALET", motDePasse: "lepetitchalet2026" },
   whatsapp: "https://wa.me/376385568",
   /** Lien WhatsApp avec message de réservation pré-rempli (WhatsApp évite au client le coût d'un appel vers l'Andorre, hors UE) */
   whatsappAvecMessage: (message: string) => `https://wa.me/376385568?text=${encodeURIComponent(message)}`,
