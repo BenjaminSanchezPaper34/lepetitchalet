@@ -2,6 +2,7 @@ import { dict, type Locale } from "@/content/i18n";
 import { boissons, carte, formatPrix, nomPlat, type Rubrique } from "@/content/menu";
 import { BookOpenCheck } from "lucide-react";
 import OngletsCarte from "./OngletsCarte";
+import Reveillon from "@/components/site/Reveillon";
 
 function Prix({ prix, locale }: { prix: Rubrique["plats"][number]["prix"]; locale: Locale }) {
   if (typeof prix === "number") return <span className="whitespace-nowrap text-xl text-bois tabular-nums">{formatPrix(prix, locale)}</span>;
@@ -61,6 +62,7 @@ export default function CarteView({ locale }: { locale: Locale }) {
 
       <div className="mx-auto max-w-4xl space-y-16 px-5 py-14 sm:px-8 sm:py-20">
         <Allergenes texte={t.allergenes} />
+        <Reveillon locale={locale} variante="carte" />
         {carte.map((r) => <Section key={r.id} r={r} locale={locale} />)}
 
         <div id="boissons" className="scroll-mt-[calc(var(--h-entete)+4.75rem)] space-y-16 border-t-4 border-double border-bois/30 pt-16">

@@ -2,6 +2,7 @@ import type { Locale } from "@/content/i18n";
 import Header from "./Header";
 import Hero from "./Hero";
 import Essentiel from "./Essentiel";
+import Reveillon from "./Reveillon";
 import Specialites from "./Specialites";
 import Grill from "./Grill";
 import CartePreview from "./CartePreview";
@@ -18,6 +19,7 @@ export default function HomePage({ locale }: { locale: Locale }) {
       <Header locale={locale} page="home" />
       <main>
         <Hero locale={locale} />
+        <Reveillon locale={locale} />
         <Essentiel locale={locale} />
         <Specialites locale={locale} />
         <Grill locale={locale} />
